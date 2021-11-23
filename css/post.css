@@ -1,0 +1,17 @@
+.title {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+header > [role="doc-subtitle"] {
+  margin: 0;
+  font-size: 1.8em;
+  font-style: italic;
+  color: gray;
+}
+
+body > main > header {
+  border-bottom: 2px dotted gray;
+  padding-bottom: .4em;
+  margin-bottom: .4em;
+}

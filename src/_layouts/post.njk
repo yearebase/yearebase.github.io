@@ -1,0 +1,17 @@
+---js
+{
+  layout: "base",
+  eleventyComputed: {
+    stylesheets: data => [...(data.stylesheets || []), "post"]
+  }
+}
+---
+
+<header>
+  <h1 class="title">{{ title | renderMD }}</h1>
+  {% if subtitle %}
+    <h3 role="doc-subtitle">{{ subtitle | renderMD }}</h3>
+  {% endif %}
+</header>
+
+{{ content }}
