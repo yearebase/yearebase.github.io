@@ -1,13 +1,26 @@
+---js
+{
+  layout: "base",
+  eleventyComputed: {
+    stylesheets: data => [...(data.stylesheets || []), "index"]
+  }
+}
 ---
-layout: base
----
+
+{% from "date.njk" import showDate %}
 
 <ul>
   {% for post in collections.post %}
     <li>
-      <a href="{{ post.url }}">
-        {{ post.data.title | renderMD }}
+      <div>
+        {{ showDate(post.data.date) }}
+      </div>
+      <a class="title" href="{{ post.url }}">
+        <h2>{{ post.data.title | renderMD }}</h2>
       </a>
+      {% if post.data.subtitle %}
+        <h3 role="doc-subtitle">{{ post.data.subtitle }}</h3>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
