@@ -41,7 +41,7 @@ line::after {
 line[indent] { margin-left: 2.5em }
 ```
 
-Really, you could! The HTML5 mafia would not run you over. However as with many things, the fact that you can doesn’t necessarily mean that you should. The point of HTML is to describe the semantics of a web page, and that is rendered void by the use of non-standard elements. To communicate the semantics of the poem effectively, we ought to use already existing elements that are as close to the ones we need as possible.
+Really, [you could](https://jsfiddle.net/tadeassoucek/dwkvh9uo/)! The HTML5 mafia would not run you over. However as with many things, the fact that you can doesn’t necessarily mean that you should. The point of HTML is to describe the semantics of a web page, and that is rendered void by the use of non-standard elements. To communicate the semantics of the poem effectively, we ought to use already existing elements that are as close to the ones we need as possible.
 
 My recommendations for marking up a poem in HTML go like this:
 
@@ -110,7 +110,7 @@ And that is about all! Here is the example from the beginning:
 </article>
 ```
 
-And here is how you may render such a poem in text:
+And here is how you may render such a poem in text ([JSFiddle](https://jsfiddle.net/tadeassoucek/qwzv62cs/)):
 
 <article class="poem embedded">
   <header>

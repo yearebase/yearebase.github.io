@@ -53,3 +53,7 @@ body > footer > ul {
   color: gray;
   font-style: italic;
 }
+
+body > footer a {
+  color: #9090ff !important;
+}

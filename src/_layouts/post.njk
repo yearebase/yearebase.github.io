@@ -7,7 +7,14 @@
 }
 ---
 
+{% from "date.njk" import showDate %}
+
 <header>
+  <div>
+    {% if date %}
+      {{ showDate(date) }}
+    {% endif %}
+  </div>
   <h1 class="title">{{ title | renderMD }}</h1>
   {% if subtitle %}
     <h3 role="doc-subtitle">{{ subtitle | renderMD }}</h3>
