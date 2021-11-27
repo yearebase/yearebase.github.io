@@ -4,7 +4,7 @@ body {
   margin: 0;
 
   color: #111;
-  background-color: #eee;
+  background-color: #fbfbfb;
 
   line-height: 1.5;
 }
@@ -43,6 +43,7 @@ body > main {
 }
 
 body > footer {
+  font-size: .8em;
   border-top: 1px solid black;
   text-align: center;
 }
@@ -55,5 +56,5 @@ body > footer > ul {
 }
 
 body > footer a {
-  color: #9090ff !important;
+  color: #6d6dff !important;
 }
