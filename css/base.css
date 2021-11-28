@@ -14,7 +14,6 @@ a, a:visited {
 }
 
 body > header {
-  border-bottom: 1px solid black;
   padding: 1em;
   text-align: center;
 }
@@ -44,7 +43,6 @@ body > main {
 
 body > footer {
   font-size: .8em;
-  border-top: 1px solid black;
   text-align: center;
 }
 

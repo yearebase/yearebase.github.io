@@ -33,12 +33,14 @@
         <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
         <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
       </li>
-      <li>
-        This text is licenced under
-        <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
-          {{- (license and license.name) or "CC BY 4.0" -}}
-        </a>.
-      </li>
+      {% if layout == "post" %}
+        <li>
+          This text is licenced under
+          <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
+            {{- (license and license.name) or "CC BY 4.0" -}}
+          </a>.
+        </li>
+      {% endif %}
       <li><a href="#top">Go to top.</a></li>
     </ul>
   </footer>

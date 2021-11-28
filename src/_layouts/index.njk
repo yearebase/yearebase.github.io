@@ -7,11 +7,11 @@
 }
 ---
 
-<p><a href="/en/about/">What is this?</a></p>
+<p><a href="/{{ locale }}/about/">What is this?</a></p>
 
 {% from "date.njk" import showDate %}
 
-<ul>
+<ul class="post-list">
   {% for post in collections.post %}
     <li>
       <div>
