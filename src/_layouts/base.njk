@@ -10,6 +10,7 @@
 
   <title>{{ title | renderMD }} &bull; YeAreBase</title>
 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/landscape.css" media="only screen and (orientation: landscape)">
 
@@ -30,6 +31,10 @@
   <footer>
     <ul>
       <li>
+        <a href="/{{ locale }}">Go home,</a>
+        <a href="#top">go to top.</a>
+      </li>
+      <li>
         <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
         <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
       </li>
@@ -41,7 +46,6 @@
           </a>.
         </li>
       {% endif %}
-      <li><a href="#top">Go to top.</a></li>
     </ul>
   </footer>
 </body>

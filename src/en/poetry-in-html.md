@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: article
 
-title: Poetry in HTML
-subtitle: How to do it.
+title: Marking Poems in HTML
 tags: [programming, html]
 date: 2021-05-07
 
