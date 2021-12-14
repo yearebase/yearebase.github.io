@@ -1,4 +1,5 @@
 ---
+locale: cs
 layout: base
 title: About
 ---

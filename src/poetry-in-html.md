@@ -1,4 +1,5 @@
 ---
+locale: en
 layout: article
 
 title: Marking Poems in HTML

@@ -21,7 +21,8 @@
 
 <body id="top">
   <header>
-    <a href="/{{ locale }}/">ye<b>are</b>base</a>
+    {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
+    <a href="{{ homeURL }}">ye<b>are</b>base</a>
   </header>
 
   <main>
@@ -31,7 +32,7 @@
   <footer>
     <ul>
       <li>
-        <a href="/{{ locale }}">Go home,</a>
+        <a href="{{ homeURL }}">Go home,</a>
         <a href="#top">go to top.</a>
       </li>
       <li>

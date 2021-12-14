@@ -1,4 +1,5 @@
 ---
-layout: redirect
-to: /en/
+locale: en
+layout: index 
+title: Home
 ---

@@ -9,6 +9,10 @@ body {
   line-height: 1.5;
 }
 
+time {
+  font-family: monospace;
+}
+
 a, a:visited {
   color: #431cff;  /* a sort of a purplish dark blue */
 }

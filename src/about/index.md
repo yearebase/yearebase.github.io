@@ -1,4 +1,5 @@
 ---
+locale: en
 layout: base
 title: About
 ---
