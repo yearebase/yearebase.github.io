@@ -7,7 +7,7 @@
 }
 ---
 
-<p><a href="/{{ locale }}/about/">What is this?</a></p>
+<p><a href="/about/{{ '' if locale == 'en' else locale + '/' }}">What is this?</a></p>
 
 {% from "date.njk" import showDate %}
 

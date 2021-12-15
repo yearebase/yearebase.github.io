@@ -2,6 +2,13 @@
   margin: 0;
 }
 
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
 .post-list > li + li {
   margin-top: 1.5em;
 }
+
+main > p:first-child { text-align: center }

@@ -32,16 +32,28 @@
   <footer>
     <ul>
       <li>
-        <a href="{{ homeURL }}">Go home,</a>
-        <a href="#top">go to top.</a>
+        {% if locale == "cs" %}
+          <a href="{{ homeURL }}">Domů,</a>
+          <a href="#top">zpět nahoru.</a>
+        {% else %}
+          <a href="{{ homeURL }}">Go home,</a>
+          <a href="#top">go to top.</a>
+        {% endif %}
       </li>
       <li>
-        <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
-        <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
+        {% if locale == "cs" %}
+          <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
+          <a href="https://opensource.org/licenses/MIT">licencí MIT</a>.
+        {% else %}
+          <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
+          <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
+        {% endif %}
       </li>
       {% if layout == "post" %}
         <li>
-          This text is licenced under
+          {% if locale == "cs" %}
+            Tento text je licencován pod
+          {% else %} This text is licenced under {% endif %}
           <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
             {{- (license and license.name) or "CC BY 4.0" -}}
           </a>.
