@@ -19,10 +19,23 @@
   {% endfor %}
 </head>
 
+{% macro translationPager() %}
+  <ul>
+    {% for l in 0 | allLangs %}
+      {% if l == locale %}
+        <li aria-current="page">{{ l | getLang }}</li>
+      {% elif translations and l in translations %}
+        <li><a href="{{ translations[l] }}">{{ l | getLang }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
 <body id="top">
   <header>
     {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
     <a href="{{ homeURL }}">ye<b>are</b>base</a>
+    {{ translationPager() }}
   </header>
 
   <main>
@@ -32,14 +45,23 @@
   <footer>
     <ul>
       <li>
-        {% if locale == "cs" %}
-          <a href="{{ homeURL }}">Domů,</a>
-          <a href="#top">zpět nahoru.</a>
-        {% else %}
-          <a href="{{ homeURL }}">Go home,</a>
-          <a href="#top">go to top.</a>
-        {% endif %}
+        <ul>
+          {% if locale == "cs" %}
+            <li><a href="{{ homeURL }}">Domů</a></li>
+            <li><a href="#top">Zpět nahoru</a></li>
+          {% else %}
+            <li><a href="{{ homeURL }}">Go home</a></li>
+            <li><a href="#top">Go to top</a></li>
+          {% endif %}
+        </ul>
       </li>
+
+      <li>
+        {{ translationPager() }}
+      </li>
+
+      <hr>
+
       <li>
         {% if locale == "cs" %}
           <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
@@ -49,11 +71,14 @@
           <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
         {% endif %}
       </li>
-      {% if layout == "post" %}
+
+      {% if isPost %}
         <li>
           {% if locale == "cs" %}
             Tento text je licencován pod
-          {% else %} This text is licenced under {% endif %}
+          {% else %}
+            This text is licenced under
+          {% endif %}
           <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
             {{- (license and license.name) or "CC BY 4.0" -}}
           </a>.

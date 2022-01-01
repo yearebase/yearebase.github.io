@@ -1,6 +1,7 @@
 ---js
 {
   layout: "base",
+  isPost: true,
   eleventyComputed: {
     stylesheets: data => [...(data.stylesheets || []), "post"]
   }

@@ -20,12 +20,13 @@ a, a:visited {
 body > header {
   padding: 1em;
   text-align: center;
+  font-size: .7em;
 }
 
 body > header > a {
   color: black !important;
   font-family: serif;
-  font-size: 3em;
+  font-size: 3rem;
   text-decoration: none;
 
   padding: 0 .18em;
@@ -41,6 +42,19 @@ body > header > a > b {
   font-weight: normal;
 }
 
+body > header > ul {
+  padding: 0;
+  list-style: none;
+}
+
+body > header li {
+  display: inline;
+}
+
+body > header li + li::before {
+  content: " | ";
+}
+
 body > main {
   padding: 1em;
 }
@@ -48,15 +62,27 @@ body > main {
 body > footer {
   font-size: .8em;
   text-align: center;
-}
-
-body > footer > ul {
-  padding: 0;
-  list-style: none;
   color: gray;
   font-style: italic;
 }
 
+body > footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+body > footer li li {
+  display: inline;
+}
+
+body > footer li li + li::before {
+  content: " | ";
+}
+
 body > footer a {
   color: #6d6dff !important;
+}
+
+body > footer hr {
+  border-top: none;
 }

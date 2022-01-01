@@ -4,6 +4,11 @@ const { lib: mdit, renderMD } = require("./config/mditSetup.js");
 
 const pairedShortcodes = require("./config/pairedShortcodes.js");
 
+const languages = {
+  en: 'english',
+  cs: 'česky'
+};
+
 module.exports = function (eleventyConfig) {
   const njkEnv = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("src/_includes"),
@@ -19,9 +24,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("renderMD", renderMD);
 
   eleventyConfig.addCollection("post", (collection) => collection.getAll()
-    .filter(e => ["article", "poem"].includes(e.data.layout))
+    .filter(e => e.data.isPost)
     .sort((a, b) => b.data.date - a.data.date)
   );
+
+  eleventyConfig.addFilter("getLang", (code) => languages[code]);
+  eleventyConfig.addFilter("allLangs", () => Object.keys(languages));
 
   for (const tag in pairedShortcodes)
     eleventyConfig.addPairedShortcode(tag, pairedShortcodes[tag]);
