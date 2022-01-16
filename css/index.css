@@ -1,5 +1,5 @@
-.title, .title > *, [role="doc-subtitle"] {
-  margin: 0;
+.title > * {
+  margin: .2em 0;
 }
 
 .post-list {
@@ -7,8 +7,12 @@
   padding: 0;
 }
 
-.post-list > li + li {
-  margin-top: 1.5em;
+.post-list li {
+  margin: 1.4em 0;
+  border-left: 2px solid white;
+  padding-left: 1em;
 }
 
-main > p:first-child { text-align: center }
+[role="doc-subtitle"] {
+  margin: .4em 0;
+}

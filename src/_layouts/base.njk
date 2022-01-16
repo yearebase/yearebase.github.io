@@ -12,7 +12,6 @@
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/landscape.css" media="only screen and (orientation: landscape)">
 
   {% for ss in stylesheets %}
     <link rel="stylesheet" href="/css/{{ ss }}.css">
@@ -31,10 +30,10 @@
   </ul>
 {% endmacro %}
 
-<body id="top">
+<body>
   <header>
     {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
-    <a href="{{ homeURL }}">ye<b>are</b>base</a>
+    <a class="logo" href="{{ homeURL }}">ye<b>are</b>base</a>
     {{ translationPager() }}
   </header>
 
@@ -43,25 +42,21 @@
   </main>
 
   <footer>
+    <hr>
+
     <ul>
-      <li>
-        <ul>
-          {% if locale == "cs" %}
-            <li><a href="{{ homeURL }}">Domů</a></li>
-            <li><a href="#top">Zpět nahoru</a></li>
-          {% else %}
-            <li><a href="{{ homeURL }}">Go home</a></li>
-            <li><a href="#top">Go to top</a></li>
-          {% endif %}
-        </ul>
-      </li>
+      {% if locale == "cs" %}
+        <li><a href="{{ homeURL }}">Domů</a></li>
+        <li><a href="#">Zpět nahoru</a></li>
+      {% else %}
+        <li><a href="{{ homeURL }}">Go home</a></li>
+        <li><a href="#">Go to top</a></li>
+      {% endif %}
+    </ul>
 
-      <li>
-        {{ translationPager() }}
-      </li>
+    {{ translationPager() }}
 
-      <hr>
-
+    <ul>
       <li>
         {% if locale == "cs" %}
           <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
