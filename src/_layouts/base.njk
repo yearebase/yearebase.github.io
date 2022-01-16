@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{{ title | renderMD }} &bull; YeAreBase</title>
+  <title>{{ title | renderMD }} ~ YeAreBase</title>
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/base.css">
@@ -16,6 +16,17 @@
   {% for ss in stylesheets %}
     <link rel="stylesheet" href="/css/{{ ss }}.css">
   {% endfor %}
+
+  <meta property="og:type" content="{{ "article" if isPost else "website" }}">
+  <meta property="og:title" content="{{ title }}">
+  {% if subtitle %}
+    <meta property="og:description" content="{{ subtitle | renderMD | stripHTML | truncate(199, true, "…") }}">
+  {% endif %}
+  <meta property="og:site_name" content="YeAreBase">
+  <meta property="og:locale" content="{{ locale }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@tadeassoucek">
 </head>
 
 {% macro translationPager() -%}

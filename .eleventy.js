@@ -22,6 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css/*.css");
 
   eleventyConfig.addNunjucksFilter("renderMD", renderMD);
+  eleventyConfig.addNunjucksFilter("stripHTML", (value) => (value || "").replace(/<\/?\w+(\s+.+)?>/g, ""));
 
   eleventyConfig.addCollection("post", (collection) => collection.getAll()
     .filter(e => e.data.isPost)
