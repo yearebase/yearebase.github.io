@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPairedShortcode(tag, pairedShortcodes[tag]);
 
   return {
-    dir: { input: 'src', output: 'built', _includes: '_includes', layouts: '_layouts' },
+    dir: { input: 'src', output: 'docs', _includes: '_includes', layouts: '_layouts' },
     templateFormats: ["md", "njk"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
