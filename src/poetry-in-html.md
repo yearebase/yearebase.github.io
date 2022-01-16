@@ -117,7 +117,7 @@ And here is how you may render such a poem in text ([JSFiddle](https://jsfiddle.
     <h1 class="poem-title">The Other Side of the River</h1>
     <address class="author">By Charles Wright</address>
   </header>
-  <main>
+  <div class="content">
     <p class="stanza">
       <span class="line">
         It’s linkage I’m talking about,<br>
@@ -129,7 +129,7 @@ And here is how you may render such a poem in text ([JSFiddle](https://jsfiddle.
         <span class="phantom">Something infinite behind everything appears,</span> and then disappears.
       </span><br>
     </p>
-  </main>
+  </div>
   <footer>
     <time class="poem-date" pubdate datetime="1984-01-12">January 12, 1984</time>
   </footer>

@@ -18,15 +18,15 @@
   {% endfor %}
 </head>
 
-{% macro translationPager() %}
+{% macro translationPager() -%}
   <ul>
-    {% for l in 0 | allLangs %}
-      {% if l == locale %}
+    {%- for l in 0 | allLangs -%}
+      {%- if l == locale -%}
         <li aria-current="page">{{ l | getLang }}</li>
-      {% elif translations and l in translations %}
+      {%- elif translations and l in translations -%}
         <li><a href="{{ translations[l] }}">{{ l | getLang }}</a></li>
-      {% endif %}
-    {% endfor %}
+      {%- endif -%}
+    {%- endfor -%}
   </ul>
 {% endmacro %}
 
@@ -45,40 +45,40 @@
     <hr>
 
     <ul>
-      {% if locale == "cs" %}
-        <li><a href="{{ homeURL }}">Domů</a></li>
+      {%- if locale == "cs" -%}
+        <li><a href="{{ homeURL }}">Domů</a></li> {#- -#}
         <li><a href="#">Zpět nahoru</a></li>
-      {% else %}
-        <li><a href="{{ homeURL }}">Go home</a></li>
+      {%- else -%}
+        <li><a href="{{ homeURL }}">Go home</a></li> {#- -#}
         <li><a href="#">Go to top</a></li>
-      {% endif %}
+      {%- endif -%}
     </ul>
 
     {{ translationPager() }}
 
-    <ul>
+    <ul> {#- -#}
       <li>
-        {% if locale == "cs" %}
+        {%- if locale == "cs" -%}
           <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
           <a href="https://opensource.org/licenses/MIT">licencí MIT</a>.
-        {% else %}
+        {%- else -%}
           <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
           <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
-        {% endif %}
+        {%- endif -%}
       </li>
 
-      {% if isPost %}
+      {%- if isPost -%}
         <li>
-          {% if locale == "cs" %}
+          {%- if locale == "cs" -%}
             Tento text je licencován pod
-          {% else %}
+          {%- else -%}
             This text is licenced under
-          {% endif %}
+          {%- endif %}
           <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
             {{- (license and license.name) or "CC BY 4.0" -}}
           </a>.
         </li>
-      {% endif %}
+      {%- endif -%}
     </ul>
   </footer>
 </body>

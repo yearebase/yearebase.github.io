@@ -5,8 +5,7 @@ body {
   background-color: #191919;
   color: white;
 
-  margin-top: 1.2em;
-  margin-bottom: 1.2em;
+  margin: 1.2em .9em;
 }
 
 time {
@@ -54,6 +53,10 @@ body > header ul, body > footer ul {
 
 body > header li, body > footer li {
   display: inline-block;
+}
+
+body > header li + li, body > footer li + li {
+  margin-left: .5em;
 }
 
 /* Responsive size {{{ */

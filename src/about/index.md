@@ -5,6 +5,8 @@ title: About
 
 translations:
   cs: cs
+
+stylesheets: [poetry]
 ---
 
 # {{ title }}

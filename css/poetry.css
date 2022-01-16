@@ -4,7 +4,7 @@
   padding-left: 1em;
 }
 
-.poem > main {
+.poem > .content {
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
