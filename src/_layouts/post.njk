@@ -11,13 +11,15 @@
 {% from "date.njk" import showDate %}
 
 <header>
-  {% if date %}
-    {{ showDate(date) }}
-  {% endif %}
-  <h1 class="title">{{ title | renderMD }}</h1>
-  {% if subtitle %}
-    <h3 role="doc-subtitle">{{ subtitle | renderMD }}</h3>
-  {% endif %}
+  {%- if date -%}
+    {{- showDate(date) -}}
+  {%- endif -%}
+  <div>
+    <h1 class="title">{{ title | renderMD }}</h1>
+    {% if subtitle %}
+      <h3 role="doc-subtitle">{{ subtitle | renderMD }}</h3>
+    {% endif %}
+  </div>
 </header>
 
 {{ content }}

@@ -1,3 +1,5 @@
+const htmlmin = require("html-minifier");
+
 const Nunjucks = require("nunjucks");
 
 const { lib: mdit, renderMD } = require("./config/mditSetup.js");
@@ -31,6 +33,20 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("getLang", (code) => languages[code]);
   eleventyConfig.addFilter("allLangs", () => Object.keys(languages));
+
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath)
+      if (outputPath.endsWith(".html"))
+        return htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        });
+      else if (outputPath.endsWith(".css"))
+        return cssmin.minify(content).css;
+
+    return content;
+  });
 
   for (const tag in pairedShortcodes)
     eleventyConfig.addPairedShortcode(tag, pairedShortcodes[tag]);

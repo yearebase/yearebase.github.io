@@ -1,16 +1,19 @@
-.title {
-  font-size: 2.6em;
-  margin: 0;
-}
-
-[role="doc-subtitle"] {
-  margin: 0;
-  font-size: 1.8em;
-  font-style: italic;
-}
+@import url("post-header.css");
 
 body > main > header {
   border-bottom: 2px dotted gray;
   padding-bottom: .4em;
   margin-bottom: .4em;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1em;
+}
+
+body > main > header > div {
+  flex-grow: 1;
+}
+
+body > main > header > time {
+  writing-mode: vertical-lr;
 }

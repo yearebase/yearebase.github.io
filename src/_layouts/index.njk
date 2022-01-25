@@ -22,15 +22,15 @@
 <ul class="post-list">
   {% for post in collections.post %}
     <li>
-      <div>
+      <div class="__post-list-item-bg">
         {{ showDate(post.data.date) }}
+        <a class="title" href="{{ post.url }}">
+          <h2>{{ post.data.title | renderMD }}</h2>
+        </a>
+        {% if post.data.subtitle %}
+          <h3 role="doc-subtitle">{{ post.data.subtitle }}</h3>
+        {% endif %}
       </div>
-      <a class="title" href="{{ post.url }}">
-        <h2>{{ post.data.title | renderMD }}</h2>
-      </a>
-      {% if post.data.subtitle %}
-        <h3 role="doc-subtitle">{{ post.data.subtitle }}</h3>
-      {% endif %}
     </li>
   {% endfor %}
 </ul>
