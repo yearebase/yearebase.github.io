@@ -28,7 +28,7 @@
           <h2>{{ post.data.title | renderMD }}</h2>
         </a>
         {% if post.data.subtitle %}
-          <h3 role="doc-subtitle">{{ post.data.subtitle }}</h3>
+          <h3 role="doc-subtitle">{{ post.data.subtitle | renderMD }}</h3>
         {% endif %}
       </div>
     </li>

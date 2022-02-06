@@ -5,7 +5,11 @@
 
 [role="doc-subtitle"] {
   margin: 0;
-  font-size: 1.8em;
+  margin-top: .3em;
+  font-size: 1.3em;
   font-style: italic;
-  font-weight: normal;
+}
+
+[role="doc-subtitle"] em {
+  font-style: normal;
 }
