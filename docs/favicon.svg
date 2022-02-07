@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 12.7 12.7"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="/home/tadeass/Projects/yearebase/img/logo-400x400.png"
+   inkscape:export-xdpi="800"
+   inkscape:export-ydpi="800"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="11.313709"
+     inkscape:cx="18.207999"
+     inkscape:cy="23.467105"
+     inkscape:window-width="1920"
+     inkscape:window-height="1002"
+     inkscape:window-x="1920"
+     inkscape:window-y="37"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient19855"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#00508a;stop-opacity:1;"
+         offset="0"
+         id="stop19853" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient19831"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#fefefe;stop-opacity:1;"
+         offset="0"
+         id="stop19829" />
+    </linearGradient>
+    <linearGradient
+       id="HighlightColor"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#f3009e;stop-opacity:1;"
+         offset="0"
+         id="stop19743" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient19721"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#65008a;stop-opacity:1;"
+         offset="0"
+         id="stop19719" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#HighlightColor"
+       id="linearGradient19747"
+       x1="3.4395833"
+       y1="7.9375"
+       x2="4.4979167"
+       y2="7.9375"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19831"
+       id="linearGradient19833"
+       x1="2.3812578"
+       y1="6.3499936"
+       x2="10.318745"
+       y2="6.3499936"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#HighlightColor"
+       id="linearGradient19857"
+       x1="6.3499999"
+       y1="7.1788764"
+       x2="12.7"
+       y2="7.1788764"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.1501281,0,-1.906627)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#191919;fill-opacity:1;stroke:none;stroke-width:0.189573;stroke-opacity:1"
+       id="rect18422"
+       width="12.7"
+       height="12.7"
+       x="6.9388939e-18"
+       y="0"
+       inkscape:label="Background" />
+    <rect
+       style="fill:url(#linearGradient19857);fill-opacity:1;stroke:none;stroke-width:0.210407;stroke-opacity:1"
+       id="rect10417"
+       width="6.3499999"
+       height="12.7"
+       x="6.3499999"
+       y="0"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.5452px;line-height:1.25;font-family:sans-serif;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.338632"
+       x="2.2999866"
+       y="11.043406"
+       id="text8855"><tspan
+         sodipodi:role="line"
+         id="tspan8853"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#fefefe;fill-opacity:1;stroke-width:0.338632"
+         x="2.2999866"
+         y="11.043406">Y</tspan></text>
+    <circle
+       style="fill:url(#linearGradient19747);fill-opacity:1;stroke:none;stroke-width:0.209559;stroke-opacity:1"
+       id="path19498"
+       cx="3.96875"
+       cy="7.9375"
+       r="0.52916664" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.209559;stroke-opacity:1"
+       id="path19498-3"
+       cx="8.7312498"
+       cy="7.9375"
+       r="0.52916664" />
+  </g>
+</svg>

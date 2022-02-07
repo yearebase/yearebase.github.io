@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("njk", njkEnv);
   eleventyConfig.setLibrary("md", mdit);
 
-  eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy({ "img/favicon*": "." });
   eleventyConfig.addPassthroughCopy("css/*.css");
 
   eleventyConfig.addNunjucksFilter("renderMD", renderMD);
