@@ -1,15 +1,1 @@
-.title {
-  font-size: 2.6em;
-  margin: 0;
-}
-
-[role="doc-subtitle"] {
-  margin: 0;
-  margin-top: .3em;
-  font-size: 1.3em;
-  font-style: italic;
-}
-
-[role="doc-subtitle"] em {
-  font-style: normal;
-}
+.title{font-size:2.6em;margin:0}[role=doc-subtitle]{margin:0;margin-top:.3em;font-size:1.3em;font-style:italic}[role=doc-subtitle] em{font-style:normal}
