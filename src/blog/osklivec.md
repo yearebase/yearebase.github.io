@@ -6,7 +6,7 @@ title: Císařův nový obličej
 subtitle: "Mayenburgova komedie _Ošklivec_ nabízí humorný pohled na plastické operace a ztrátu identity."
 date: 2022-02-05
 
-permalink: /p/osklivec/index.html
+tags: [blog]
 ---
 
 Lette, vynálezce modulárního konektoru 2CK, je šokován, když mu jeho nadřízený řekne, že jeho výtvor bude na konferenci prezentovat jeho asistent. Když se zeptá na důvod, jeho šéf kolem odpovědi nějakou dobu tancuje, ale pak jí ze sebe konečně vyhrkne: Lette je neobyčejně ošklivý. Lette tento názor odmítne, avšak jeho žena mu potvrdí, že je tomu tak. Že je tak ošklivý, že se mu nedokáže podívat přímo do obličeje. Tak ošklivý, že mu to za celý jeho život nikdo nesdělil v mylném domnění, že si toho je vědom.

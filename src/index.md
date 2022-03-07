@@ -1,6 +1,11 @@
 ---
 locale: en
-layout: index 
+
+layout: post-list
+postList:
+  title: All
+  selector: "post"
+
 title: Home
 
 translations:

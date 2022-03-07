@@ -3,12 +3,10 @@ locale: en
 layout: article
 
 title: Marking Poems in HTML
-tags: [programming, html]
+tags: [blog, programming, html]
 date: 2021-05-07
 
 stylesheets: [code, poetry]
-
-permalink: /p/poetry-in-html/index.html
 ---
 
 In an ideal world, writing a poem in HTML would look something like this:

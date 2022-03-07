@@ -41,15 +41,17 @@
 </head>
 
 {% macro translationPager() -%}
-  <ul>
-    {%- for l in 0 | allLangs -%}
-      {%- if l == locale -%}
-        <li aria-current="page">{{ l | getLang }}</li>
-      {%- elif translations and l in translations -%}
-        <li><a href="{{ translations[l] }}">{{ l | getLang }}</a></li>
-      {%- endif -%}
-    {%- endfor -%}
-  </ul>
+  <nav>
+    <ul>
+      {%- for l in 0 | allLangs -%}
+        {%- if l == locale -%}
+          <li aria-current="page">{{ l | getLang }}</li>
+        {%- elif translations and l in translations -%}
+          <li><a href="{{ translations[l] }}">{{ l | getLang }}</a></li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </nav>
 {% endmacro %}
 
 <body>
@@ -57,6 +59,7 @@
     {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
     <a class="logo" href="{{ homeURL }}">ye<b>are</b>base</a>
     {{ translationPager() }}
+    <a href="/about/{{ ('' if locale == 'en' else 'cs/') }}">about</a>
   </header>
 
   <main>
@@ -66,19 +69,21 @@
   <footer>
     <hr>
 
-    <ul>
-      {%- if locale == "cs" -%}
-        <li><a href="{{ homeURL }}">Domů</a></li> {#- -#}
-        <li><a href="#">Zpět nahoru</a></li>
-      {%- else -%}
-        <li><a href="{{ homeURL }}">Go home</a></li> {#- -#}
-        <li><a href="#">Go to top</a></li>
-      {%- endif -%}
-    </ul>
+    <nav>
+      <ul>
+        {%- if locale == "cs" -%}
+          <li><a href="{{ homeURL }}">Domů</a></li> {#- -#}
+          <li><a href="#">Zpět nahoru</a></li>
+        {%- else -%}
+          <li><a href="{{ homeURL }}">Go home</a></li> {#- -#}
+          <li><a href="#">Go to top</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
 
     {{ translationPager() }}
 
-    <ul> {#- -#}
+    <ul class="license-notice"> {#- -#}
       <li>
         {%- if locale == "cs" -%}
           <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod

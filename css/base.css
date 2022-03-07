@@ -45,19 +45,24 @@ body > footer hr {
   margin-bottom: 1rem;
 }
 
-body > header ul, body > footer ul {
+nav ul {
   list-style: none;
   padding: 0;
-  margin: .4em;
 }
 
-body > header li, body > footer li {
+nav ul li {
   display: inline-block;
 }
 
-body > header li + li, body > footer li + li {
+nav ul li + li {
   margin-left: .5em;
 }
+
+body > header ul, body > footer ul {
+  margin: .4em;
+}
+
+.license-notice { list-style: none; padding: 0; }
 
 /* Responsive size {{{ */
 @media only screen and (min-width: 1300px) {

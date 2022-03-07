@@ -1,0 +1,59 @@
+---js
+{
+  layout: "base",
+  eleventyComputed: {
+    stylesheets: data => [...(data.stylesheets || []), "post-list"]
+  }
+}
+---
+
+{% from "date.njk" import showDate %}
+
+<div class="__split-v">
+  <h1 class="grow">{{ postList.title }}:</h1>
+
+  <nav class="post-list-pager">
+    <ul>
+      {% if postList.selector != "post" %}
+        <li>
+          <a href="/{{ 'cs' if locale == 'cs' else '' }}">
+            {%- if locale == "cs" -%}
+              Vše
+            {%- else -%}
+              All
+            {%- endif -%}
+          </a>
+        </li>
+      {% endif %}
+      {% if postList.selector != "poem" %}
+        <li>
+          <a href="/poems/{{ 'cs' if locale == 'cs' else '' }}">
+            {%- if locale == "cs" -%}
+              Básně
+            {%- else -%}
+              Poems
+            {%- endif -%}
+          </a>
+        </li>
+      {% endif %}
+      {% if postList.selector != "blog" %}
+        <li>
+          <a href="/blog/{{ 'cs' if locale == 'cs' else '' }}">Blog</a>
+        </li>
+      {% endif %}
+  </nav>
+</div>
+
+<ul class="post-list">
+  {% for post in collections[postList.selector] | reverse %}
+    <li>
+      {{ showDate(post.data.date) }}
+      <a class="title" href="{{ post.url }}">
+        <h2>{{ post.data.title | renderMD }}</h2>
+      </a>
+      {% if post.data.subtitle %}
+        <h3 role="doc-subtitle">{{ post.data.subtitle | renderMD }}</h3>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

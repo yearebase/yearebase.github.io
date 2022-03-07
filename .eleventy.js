@@ -1,9 +1,6 @@
 const htmlmin = require("html-minifier");
-
 const Nunjucks = require("nunjucks");
-
 const { lib: mdit, renderMD } = require("./config/mditSetup.js");
-
 const pairedShortcodes = require("./config/pairedShortcodes.js");
 
 const languages = {
@@ -28,7 +25,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("post", (collection) => collection.getAll()
     .filter(e => e.data.isPost)
-    .sort((a, b) => b.data.date - a.data.date)
+    .sort((a, b) => a.data.date - b.data.date)
   );
 
   eleventyConfig.addFilter("getLang", (code) => languages[code]);
@@ -42,8 +39,6 @@ module.exports = function (eleventyConfig) {
           removeComments: true,
           collapseWhitespace: true
         });
-      else if (outputPath.endsWith(".css"))
-        return cssmin.minify(content).css;
 
     return content;
   });
