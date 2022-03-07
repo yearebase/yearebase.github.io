@@ -3,23 +3,15 @@
   layout: "base",
   isPost: true,
   eleventyComputed: {
-    stylesheets: data => [...(data.stylesheets || []), "post"]
+    stylesheets: data => [...(data.stylesheets || []), "post", "post-header"]
   }
 }
 ---
 
-{% from "date.njk" import showDate %}
+{% from "post.njk" import header %}
 
 <header>
-  {%- if date -%}
-    {{- showDate(date) -}}
-  {%- endif -%}
-  <div>
-    <h1 class="title">{{ title | renderMD }}</h1>
-    {% if subtitle %}
-      <h3 role="doc-subtitle">{{ subtitle | renderMD }}</h3>
-    {% endif %}
-  </div>
+  {{ header({ "data": { "title": title, "subtitle": subtitle, "date": date, "tags": tags } }, locale, link = false) }}
 </header>
 
 {{ content }}

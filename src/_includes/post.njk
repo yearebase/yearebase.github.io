@@ -1,0 +1,33 @@
+{% from "date.njk" import showDate %}
+
+{% macro header(post, locale, link = true) %}
+  {{- showDate(post.data.date, class = "post-date") -}}
+
+  {% if link %} <a class="post-title-link" href="{{ post.url }}"> {% endif %}
+    <h2 class="post-title">{{ post.data.title | renderMD }}</h2>
+  {% if link %} </a> {% endif %}
+
+  {%- if post.data.subtitle %}
+    <h3 class="post-subtitle" role="doc-subtitle">{{ post.data.subtitle | renderMD }}</h3>
+  {% endif -%}
+
+  <ul class="post-tags">
+    {% for tag in post.data.tags %}
+      <li>
+        {% if tag == "poem" %}
+          <a href="/poems/{{ 'cs' if locale == 'cs' else '' }}">
+            {%- if locale == 'cs' -%}
+              básně
+            {%- else -%}
+              poems
+            {%- endif -%}
+          </a>
+        {%- elif tag == "blog" %}
+          <a href="/blog/{{ 'cs' if locale == 'cs' else '' }}">blog</a>
+        {%- else -%}
+          {{- tag -}}
+        {%- endif -%}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

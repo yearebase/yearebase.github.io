@@ -2,7 +2,7 @@
 {
   layout: "base",
   eleventyComputed: {
-    stylesheets: data => [...(data.stylesheets || []), "post-list"]
+    stylesheets: data => [...(data.stylesheets || []), "post-list", "post-header"]
   }
 }
 ---
@@ -44,16 +44,10 @@
   </nav>
 </div>
 
+{% from "post.njk" import header %}
+
 <ul class="post-list">
   {% for post in collections[postList.selector] | reverse %}
-    <li>
-      {{ showDate(post.data.date) }}
-      <a class="title" href="{{ post.url }}">
-        <h2>{{ post.data.title | renderMD }}</h2>
-      </a>
-      {% if post.data.subtitle %}
-        <h3 role="doc-subtitle">{{ post.data.subtitle | renderMD }}</h3>
-      {% endif %}
-    </li>
+    <li>{{ header(post, locale) }}</li>
   {% endfor %}
 </ul>

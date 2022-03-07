@@ -19,7 +19,8 @@ time {
 }
 
 a, a:visited {
-  color: inherit;
+  color: #8B558B;
+  text-decoration: none;
 }
 
 p {
@@ -52,16 +53,16 @@ body > footer hr {
   margin-bottom: 1rem;
 }
 
-nav ul {
+nav ul, ul.post-tags {
   list-style: none;
   padding: 0;
 }
 
-nav ul li {
+nav ul li, ul.post-tags li {
   display: inline-block;
 }
 
-nav ul li + li {
+nav ul li + li, ul.post-tags li + li {
   margin-left: .5em;
 }
 
@@ -102,8 +103,4 @@ body > header ul, body > footer ul {
   body > header, body > footer {
     display: none;
   }
-}
-
-::selection, ::-moz-selection {
-  background-color: #90DDF0;
 }
