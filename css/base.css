@@ -2,10 +2,15 @@ body {
   font-family: sans-serif;
   font-size: 14pt;
 
-  background-color: #191919;
-  color: white;
+  background-color: #90DDF0;
+  color: #000411;
 
-  margin: 1.2em .9em;
+  margin: 0;
+}
+
+main {
+  background-color: #CBB4CF;
+  padding: 1rem;
 }
 
 time {
@@ -14,7 +19,7 @@ time {
 }
 
 a, a:visited {
-  color: white;
+  color: inherit;
 }
 
 p {
@@ -36,11 +41,12 @@ body > footer {
   font-size: .75em;
   text-align: center;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 body > footer hr {
   border: none;
-  border-top: 1px solid white;
+  border-top: 1px solid #000411;
   width: 50%;
   margin-bottom: 1rem;
 }
@@ -67,7 +73,7 @@ body > header ul, body > footer ul {
 /* Responsive size {{{ */
 @media only screen and (min-width: 1300px) {
   body {
-    width: 40% !important;
+    width: 50% !important;
   }
 
   body > header {
@@ -82,6 +88,10 @@ body > header ul, body > footer ul {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  main {
+    padding: 1rem 2rem;
   }
 }
 /* }}} */

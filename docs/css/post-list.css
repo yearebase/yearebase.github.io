@@ -9,7 +9,7 @@
 .post-list li {
   margin: 0;
   padding: .75em 1em;
-  border-left: 1px solid white;
+  border-left: 1px solid #000411;
 }
 
 .post-list li + li {
