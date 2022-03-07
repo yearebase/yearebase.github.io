@@ -1,5 +1,5 @@
 ---
-locale: en
+locale: cs
 
 layout: post-list
 postList:
@@ -9,5 +9,5 @@ postList:
 title: Blog
 
 translations:
-  cs: cs
+  en: ..
 ---

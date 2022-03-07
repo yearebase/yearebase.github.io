@@ -1,13 +1,13 @@
 ---
-locale: en
+locale: cs
 
 layout: post-list
 postList:
-  title: Poems
+  title: Básně
   selector: "poem"
 
-title: Poems
+title: Básně
 
 translations:
-  cs: cs
+  en: ..
 ---

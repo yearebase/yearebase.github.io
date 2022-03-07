@@ -105,6 +105,5 @@ body > header ul, body > footer ul {
 }
 
 ::selection, ::-moz-selection {
-  background-color: white;
-  color: black;
+  background-color: #90DDF0;
 }

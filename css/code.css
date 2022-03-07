@@ -7,10 +7,8 @@ pre {
   padding: 0 .7em;
   overflow-x: auto;
   box-sizing: border-box;
-  border-left: 5px solid gray;
+  border-left: 5px solid #000411;
 }
-
-/* Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org> */
 
 .hljs-string,
 .hljs-variable,
@@ -21,14 +19,15 @@ pre {
 .hljs-addition,
 .hljs-attribute,
 .hljs-link {
-  color: #888;
+  color: #7700d9;
 }
 
 .hljs-comment,
 .hljs-quote,
 .hljs-meta,
-.hljs-deletion {
-  color: #ccc;
+.hljs-deletion,
+.hljs-emphasis {
+  font-style: italic;
 }
 
 .hljs-keyword,
@@ -38,8 +37,4 @@ pre {
 .hljs-type,
 .hljs-strong {
   font-weight: bold;
-}
-
-.hljs-emphasis {
-  font-style: italic;
 }
