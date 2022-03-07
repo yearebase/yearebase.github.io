@@ -13,7 +13,7 @@ Tato stránka byla vytvořena a je spravována [Tadeášem Součkem](https://git
 
 ## Proč „Ye Are Base“?
 
-Tato fráze pochází z básně [_Bastard Born_](https://theanarchistlibrary.org/library/voltairine-de-cleyre-bastard-born) od Voltairine de Cleyre:
+V přibližném překladu znamená: „To vy jste mrzcí!“ Tuto frázi jsem vzal z básně [_Bastard Born_](https://theanarchistlibrary.org/library/voltairine-de-cleyre-bastard-born) od Voltairine de Cleyre:
 
 <blockquote>
   {% poem %}

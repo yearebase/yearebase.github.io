@@ -11,11 +11,11 @@ stylesheets: [poetry]
 
 # {{ title }}
 
-This website is created and operated by [Tadeáš Souček](https://github.com/tadeassoucek). Address any concerns or questions to [yearebase@gmail.com](mailto:yearebase@gmail.com).
+This website was created and is operated by [Tadeáš Souček](https://github.com/tadeassoucek). Address any concerns or questions to [yearebase@gmail.com](mailto:yearebase@gmail.com).
 
 ## Why ‘Ye Are Base’?
 
-It‘s a line from Voltairine de Cleyre’s 1891 poem [_Bastard Born_](https://theanarchistlibrary.org/library/voltairine-de-cleyre-bastard-born):
+It’s a line from Voltairine de Cleyre’s 1891 poem [_Bastard Born_](https://theanarchistlibrary.org/library/voltairine-de-cleyre-bastard-born):
 
 <blockquote>
   {% poem %}
