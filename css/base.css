@@ -34,7 +34,8 @@ p {
 
 body > header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 body > footer {
@@ -80,6 +81,7 @@ body > header ul, body > footer ul {
     position: fixed;
     top: 1em;
     left: 1em;
+    margin: 0;
   }
 }
 

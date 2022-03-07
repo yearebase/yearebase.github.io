@@ -1,5 +1,7 @@
 @import url("post-header.css");
 
+.post-list-title { font-size: 2em; }
+
 .post-list {
   list-style: none;
   padding: 0;
@@ -17,7 +19,7 @@
 }
 
 .title {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .title > * {
