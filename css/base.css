@@ -1,20 +1,39 @@
 :root {
   font-size: 14pt;
+
+  --link-color: blue;
+  --bg-color: white;
+  --bg-shadow: none;
+  --bg-border: none;
+  --bg-border-image: none;
+  --bg-border-radius: 0;
+  --text-color: black;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 
-  background-color: #90DDF0;
-  color: #000411;
+  background: var(--bg-color);
+  image-rendering: pixelated;
+  background-size: 10%;
+
+  color: var(--text-color);
 
   margin: 0;
+
+  min-height: 100vh;
 }
 
 main {
-  background-color: #CBB4CF;
-  padding: .7rem;
+  background-color: var(--bg-color);
+  box-sizing: border-box;
+  border: var(--bg-border);
+  border-image: var(--bg-border-image);
+  border-radius: var(--bg-border-radius);
+  image-rendering: pixelated;
+
+  padding: 1rem;
 }
 
 time {
@@ -22,9 +41,10 @@ time {
   font-size: .8rem;
 }
 
+hr { border-color: var(--text-color); }
+
 a, a:visited {
-  color: #8B558B;
-  text-decoration: none;
+  color: var(--link-color);
 }
 
 p {
@@ -38,24 +58,37 @@ p {
 }
 
 body > header {
+  background-color: var(--bg-color);
+  border: var(--bg-border);
+  border-radius: var(--bg-border-radius);
+  border-image: var(--bg-border-image);
+  box-shadow: var(--bg-shadow);
+
   text-align: center;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+  padding: 1em;
 }
 
 body > footer {
-  font-size: .6rem;
+  background-color: var(--bg-color);
+  border: var(--bg-border);
+  border-radius: var(--bg-border-radius);
+  border-image: var(--bg-border-image);
+  box-shadow: var(--bg-shadow);
+
+  max-width: 60%;
+  font-size: .8rem;
   text-align: center;
+
+  margin: auto;
   margin-top: 3rem;
   margin-bottom: 2rem;
+
+  padding: 1em;
 }
 
-body > footer hr {
-  border: none;
-  border-top: 1px solid #000411;
-  width: 50%;
-  margin-bottom: 1rem;
-}
+body > footer hr { display: none; }
 
 nav ul, ul.post-tags {
   list-style: none;
@@ -95,16 +128,29 @@ body > header ul, body > footer ul {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+
+    background-size: 4%;  /* make the bg smaller */
   }
 
   main {
-    padding: 1rem 2rem;
+    box-shadow: var(--bg-shadow, none)
   }
 }
+
+@media only screen and (max-width: 800px) { main { border-left: none; border-right: none } }
 /* }}} */
 
 @media only print {
+  body, main {
+    background: white;
+    color: black;
+  }
+
   body > header, body > footer {
     display: none;
+  }
+
+  a, a:visited {
+    color: blue !important;
   }
 }

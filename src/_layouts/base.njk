@@ -26,6 +26,9 @@
 
   <link rel="stylesheet" href="/css/base.css">
 
+  {% if not theme %} {% set theme = "default" %} {% endif %}
+  <link rel="stylesheet" href="/css/themes/{{ theme }}/theme.css">
+
   {% for ss in stylesheets %}
     <link rel="stylesheet" href="/css/{{ ss }}.css">
   {% endfor %}

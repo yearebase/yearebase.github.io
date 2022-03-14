@@ -6,7 +6,7 @@
 
 .post-list > li {
   margin: 0;
-  padding: .75em 1em;
+  padding: .75em 0;
 }
 
 .post-list > li + li {

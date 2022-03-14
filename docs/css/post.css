@@ -1,1 +1,9 @@
-body>main>header{border-bottom:2px dotted #000;padding-bottom:.4em;margin-bottom:.4em}.post-title{margin:0}
+body > main > header {
+  border-bottom: 2px dotted var(--text-color);
+  padding-bottom: .4em;
+  margin-bottom: .4em;
+}
+
+.post-title {
+  margin: 0;
+}
