@@ -1,0 +1,28 @@
+{% from "date.njk" import showDate %}
+
+{% macro showUpdate(update, locale) %}
+  <li>
+    {{ showDate(update.date, "date") }}
+    <div>
+      <h3 class="title">{{ update.title[locale] | renderMD }}</h3>
+      <p class="summary">{{ update.summary[locale] | renderMD }}</p>
+    </div>
+  </li>  
+{% endmacro %}
+
+{% macro showUpdateListPreview(updates, count, locale) %}
+  <article class="inset">
+    <ul class="update-list">
+      {% for u in updates | jsSlice(0, count) %}
+        {{ showUpdate(u, locale) }}
+      {% endfor %}
+    </ul>
+    <a class="more-link" href="/updates/{{ '' if locale == 'en' else locale }}">
+      {%- if locale == 'cs' %}
+        Všechny změny
+      {%- else -%}
+        All updates
+      {%- endif -%}
+    </a>
+  </article>
+{% endmacro %}

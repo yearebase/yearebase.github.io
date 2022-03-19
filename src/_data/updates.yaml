@@ -1,0 +1,19 @@
+- title:
+    en: "Added the update section"
+    cs: "Přidal jsem oddíl s updaty"
+  summary:
+    en: "[This section](/updates/) shows what’s changed on the website"
+    cs: "[Tento oddíl](/updates/cs/) ukazuje, co se na stránce změnilo"
+  date: 2022-03-19
+
+- title:
+    en: "Update"
+  summary:
+    en: "whatever"
+  date: 2020-10-01
+
+- title:
+    en: "Test"
+  summary:
+    en: "This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. This is an update with an egregiously long summary. Can it even be called a summary at this point?"
+  date: 2019-01-12

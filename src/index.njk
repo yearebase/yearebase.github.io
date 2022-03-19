@@ -1,0 +1,27 @@
+---
+locale: en
+layout: base
+
+title: Home
+
+stylesheets: [update-list, post-list, post-header]
+
+translations:
+  cs: cs
+---
+
+<h1>Welcome to my website!</h1>
+
+<p>Nice having you here! Have a seat! Have a look! Have <a href="/about/#licence">whatever you like!</a></p>
+
+<p>This is my venture into the world of the World Wide Web! Here’s what’s new on this site:</p>
+
+{% from "update.njk" import showUpdateListPreview %}
+{{ showUpdateListPreview(updates, 3, locale) }}
+
+<p>And here’s some of the stuff I’ve written:</p>
+
+{% from "post.njk" import showPostListPreview %}
+{{ showPostListPreview(collections.post | reverse, 3, locale) }}
+
+<p>Wanna know what this is about? Head over to the helpfully titled <a href="/about/">About page!</a></p>

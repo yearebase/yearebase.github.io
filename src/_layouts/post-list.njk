@@ -16,7 +16,7 @@
     <ul>
       {% if postList.selector != "post" %}
         <li>
-          <a href="/{{ 'cs' if locale == 'cs' else '' }}">
+          <a href="/all/{{ 'cs' if locale == 'cs' else '' }}">
             {%- if locale == "cs" -%}
               Vše
             {%- else -%}
@@ -44,10 +44,10 @@
   </nav>
 </div>
 
-{% from "post.njk" import header %}
+{% from "post.njk" import showPost %}
 
 <ul class="post-list">
   {% for post in collections[postList.selector] | reverse %}
-    <li>{{ header(post, locale) }}</li>
+    {{ showPost(post, locale) }}
   {% endfor %}
 </ul>

@@ -6,7 +6,7 @@ postList:
   title: All
   selector: "post"
 
-title: Home
+title: All
 
 translations:
   cs: cs

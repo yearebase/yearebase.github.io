@@ -1,1 +1,4 @@
-{ "theme": "plant" }
+{
+  "theme": "plant",
+  "layout": "article"
+}

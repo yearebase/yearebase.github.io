@@ -1,0 +1,16 @@
+---
+locale: en
+layout: base
+
+title: Updates
+
+stylesheets: [update-list]
+---
+
+{% from "update.njk" import showUpdate %}
+
+<ul class="update-list">
+  {% for u in updates %}  
+    {{ showUpdate(u, locale) }}
+  {% endfor %}
+</ul>

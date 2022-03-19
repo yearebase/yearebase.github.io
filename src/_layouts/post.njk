@@ -8,10 +8,10 @@
 }
 ---
 
-{% from "post.njk" import header %}
+{% from "post.njk" import showPostHeader %}
 
 <header>
-  {{ header({ "data": { "title": title, "subtitle": subtitle, "date": date, "tags": tags } }, locale, link = false) }}
+  {{ showPostHeader({ "data": { "title": title, "subtitle": subtitle, "date": date, "tags": tags } }, locale, link = false) }}
 </header>
 
 {{ content }}

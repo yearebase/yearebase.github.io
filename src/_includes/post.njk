@@ -1,6 +1,6 @@
 {% from "date.njk" import showDate %}
 
-{% macro header(post, locale, link = true) %}
+{% macro showPostHeader(post, locale, link = true) %}
   {{- showDate(post.data.date, class = "post-date") -}}
 
   {% if link %} <a class="post-title-link" href="{{ post.url }}"> {% endif %}
@@ -30,4 +30,25 @@
       </li>
     {% endfor %}
   </ul>
+{% endmacro %}
+
+{% macro showPost(post, locale) %}
+  <li>{{ showPostHeader(post, locale, true) }}</li>
+{% endmacro %}
+
+{% macro showPostListPreview(posts, count, locale) %}
+<article class="inset">
+  <ul class="post-list">
+    {% for post in posts | jsSlice(0, count) %}
+      {{ showPost(post, locale) }}
+    {% endfor %}
+  </ul>
+  <a class="more-link" href="/all/{{ '' if locale == 'en' else locale }}">
+    {%- if locale == "cs" -%}
+      Všechny posty
+    {%- else -%}
+      All posts
+    {%- endif -%}
+  </a>
+</article>
 {% endmacro %}

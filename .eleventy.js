@@ -2,6 +2,7 @@ const htmlmin = require("html-minifier");
 const Nunjucks = require("nunjucks");
 const { lib: mdit, renderMD } = require("./config/mditSetup.js");
 const pairedShortcodes = require("./config/pairedShortcodes.js");
+const YAML = require("yaml");
 
 const languages = {
   en: 'english',
@@ -23,6 +24,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("renderMD", renderMD);
   eleventyConfig.addNunjucksFilter("stripHTML", (value) => (value || "").replace(/<\/?\w+?(\s+?\w+?=".+?")?>/g, ""));
+  eleventyConfig.addNunjucksFilter("toDate", (value) => new Date(value));
+  eleventyConfig.addNunjucksFilter("jsSlice", (str, start, end) => str.slice(start, end));
 
   eleventyConfig.addCollection("post", (collection) => collection.getAll()
     .filter(e => e.data.isPost)
@@ -44,11 +47,13 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addDataExtension("yaml", contents => YAML.parse(contents));
+
   for (const tag in pairedShortcodes)
     eleventyConfig.addPairedShortcode(tag, pairedShortcodes[tag]);
 
   return {
-    dir: { input: 'src', output: 'docs', _includes: '_includes', layouts: '_layouts' },
+    dir: { input: 'src', output: 'docs', data: '_data', _includes: '_includes', layouts: '_layouts' },
     templateFormats: ["md", "njk"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",

@@ -1,6 +1,5 @@
 ---
 locale: en
-layout: article
 
 title: Marking Poems in HTML
 tags: [blog, programming, html]
