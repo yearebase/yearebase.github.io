@@ -18,9 +18,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("njk", njkEnv);
   eleventyConfig.setLibrary("md", mdit);
 
-  eleventyConfig.addPassthroughCopy({ "img/favicon/*": "." });
-  eleventyConfig.addPassthroughCopy("img/*.png");
-  eleventyConfig.addPassthroughCopy("css/**/*.*");
+  eleventyConfig.addPassthroughCopy({ "res/img/favicon/*": "." });
+  eleventyConfig.addPassthroughCopy("res");
 
   eleventyConfig.addNunjucksFilter("renderMD", renderMD);
   eleventyConfig.addNunjucksFilter("stripHTML", (value) => (value || "").replace(/<\/?\w+?(\s+?\w+?=".+?")?>/g, ""));

@@ -25,6 +25,8 @@
   <meta name="msapplication-TileColor" content="#191919">
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/res/fonts/outward/outward.css">
+  <link rel="stylesheet" href="/res/fonts/karrik/karrik.css">
 
   {% if not theme %} {% set theme = "default" %} {% endif %}
   <link rel="stylesheet" href="/css/themes/{{ theme }}/theme.css">
@@ -52,7 +54,7 @@
         {%- if l == locale -%}
           <li aria-current="page">{{ l | getLang }}</li>
         {%- elif translations and l in translations -%}
-          <li><a href="{{ translations[l] }}">{{ l | getLang }}</a></li>
+          <a href="{{ translations[l] }}"><li>{{ l | getLang }}</li></a>
         {%- endif -%}
       {%- endfor -%}
     </ul>
@@ -64,7 +66,7 @@
     {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
     <a class="logo" href="{{ homeURL }}">ye<b>are</b>base</a>
     {{ translationPager() }}
-    <a href="/about/{{ ('' if locale == 'en' else 'cs/') }}">about</a>
+    <a {% if title == "About" %} aria-current="page" {% endif %} href="/about/{{ ('' if locale == 'en' else 'cs/') }}">about</a>
   </header>
 
   <main>

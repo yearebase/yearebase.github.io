@@ -1,0 +1,17 @@
+@use "util";
+
+.update-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.update-date {
+  font-family: monospace;
+  font-size: .8em;
+}
+
+.update-title {
+  margin: 0;
+  margin-bottom: .1rem;
+}

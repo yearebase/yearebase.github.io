@@ -1,0 +1,14 @@
+@mixin empty($fg, $bg) {
+  display: block;
+  border: 6px solid $fg;
+  padding: 6px;
+  color: $fg;
+  background-color: $bg;
+  text-align: center;
+  text-decoration: none;
+
+  &[aria-current=page] {
+    background-color: $fg;
+    color: $bg;
+  }
+}

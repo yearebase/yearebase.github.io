@@ -2,10 +2,10 @@
 
 {% macro showUpdate(update, locale) %}
   <li>
-    {{ showDate(update.date, "date") }}
+    {{ showDate(update.date, "update-date") }}
     <div>
-      <h3 class="title">{{ update.title[locale] | renderMD }}</h3>
-      <p class="summary">{{ update.summary[locale] | renderMD }}</p>
+      <h3 class="update-title">{{ update.title[locale] | renderMD }}</h3>
+      <p class="update-summary">{{ update.summary[locale] | renderMD }}</p>
     </div>
   </li>  
 {% endmacro %}

@@ -10,7 +10,8 @@
     "dry": "npx @11ty/eleventy --dryrun",
     "watch": "npx @11ty/eleventy --watch",
     "minify": "node scripts/minify.mjs",
-    "serve": "npx @11ty/eleventy --serve"
+    "serve": "npx @11ty/eleventy --serve",
+    "compile-sass": "npx sass style:docs/css"
   },
   "keywords": [],
   "license": "MIT",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "minify": "^8.0.3",
+    "sass": "^1.49.9",
     "table": "^6.7.3"
   }
 }
