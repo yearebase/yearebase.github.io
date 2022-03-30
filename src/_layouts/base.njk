@@ -26,10 +26,10 @@
 
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/res/fonts/outward/outward.css">
-  <link rel="stylesheet" href="/res/fonts/karrik/karrik.css">
 
-  {% if not theme %} {% set theme = "default" %} {% endif %}
-  <link rel="stylesheet" href="/css/themes/{{ theme }}/theme.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   {% for ss in stylesheets %}
     <link rel="stylesheet" href="/css/{{ ss }}.css">
@@ -48,26 +48,32 @@
 </head>
 
 {% macro translationPager() -%}
-  <nav>
-    <ul>
-      {%- for l in 0 | allLangs -%}
-        {%- if l == locale -%}
-          <li aria-current="page">{{ l | getLang }}</li>
-        {%- elif translations and l in translations -%}
-          <a href="{{ translations[l] }}"><li>{{ l | getLang }}</li></a>
-        {%- endif -%}
-      {%- endfor -%}
-    </ul>
-  </nav>
+  <ul>
+    {%- for l in 0 | allLangs -%}
+      {%- if l == locale -%}
+        <li aria-current="page">{{ l | getLang }}</li>
+      {%- elif translations and l in translations -%}
+        <a href="{{ translations[l] }}"><li>{{ l | getLang }}</li></a>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
 {% endmacro %}
 
 <body>
   <header>
     {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
-    <a class="logo" href="{{ homeURL }}">ye<b>are</b>base</a>
-    {{ translationPager() }}
-    <a {% if title == "About" %} aria-current="page" {% endif %} href="/about/{{ ('' if locale == 'en' else 'cs/') }}">about</a>
+    <a class="logo" href="{{ homeURL }}"><img src="/res/img/logo-colour-scheme.svg"></a>
   </header>
+
+  <aside class="sidebar">
+    <nav>
+      {{ translationPager() }}
+      <ul>
+        <a href="/"><li>home</li></a>
+        <a href="/about/"><li>about</li></a>
+      </ul>
+    </nav>
+  </aside>
 
   <main>
     {{ content }}
@@ -86,9 +92,8 @@
           <li><a href="#">Go to top</a></li>
         {%- endif -%}
       </ul>
+      {{ translationPager() }}
     </nav>
-
-    {{ translationPager() }}
 
     <ul class="license-notice"> {#- -#}
       <li>
