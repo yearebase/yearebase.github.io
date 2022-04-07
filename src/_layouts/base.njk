@@ -50,7 +50,7 @@
 </head>
 
 {% macro translationPager() -%}
-  <ul>
+  <ul class="translation-pager">
     {%- for l in 0 | allLangs -%}
       {%- if l == locale -%}
         <li aria-current="page">{{ l | getLang }}</li>
@@ -64,21 +64,17 @@
 <body>
   <header>
     {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
-    <a class="logo" href="{{ homeURL }}"><img src="/res/img/logo-colour-scheme.svg"></a>
+    <a class="logo" href="{{ homeURL }}"><img src="/res/img/logo-colour-scheme.svg" alt="YeAreBase"></a>
   </header>
 
   <aside class="sidebar">
     <nav>
       {{ translationPager() }}
-      <ul>
-        <a href="/"><li>home</li></a>
-        <a href="/about/"><li>about</li></a>
-      </ul>
     </nav>
   </aside>
 
   <div class="content">
-    <nav>
+    <nav class="tab-bar">
       <ul>
         {% macro _link(text, url) %}
           {% if not url %} {% set url = "/" + text + '/' %} {% endif %}

@@ -4,9 +4,9 @@
 
   > li, > a > li {
     display: inline-block;
-
-    & + li { margin-left: $gap; }
   }
+
+  > *:not(:last-child) { margin-right: $gap; }
 }
 
 @mixin block() {

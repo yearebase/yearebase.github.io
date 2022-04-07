@@ -4,24 +4,16 @@
 @use "buttons";
 @use "util";
 
-$bg: #111;
-$fg: white;
-$hi: #EE4B6A;
-
-$bodyColor: $bg;
-$bgColor: $bg;
-
-$highlightColor: $hi;
-
-$textColor: $fg;
+$fontSans: 'Libre Franklin', 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
 :root {
   font-size: 14pt;
-  font-family: 'Libre Franklin', 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+  font-family: $fontSans;
 
-  --bg: #{$bg};
-  --fg: #{$fg};
-  --hi: #{$hi};
+  --bg: #111;
+  --fg: white;
+  --hi: #EE4B6A;
+  --hi-alt: #F08296;
 
   --link-color: var(--hi);
   --headline-color: var(--hi);
@@ -31,15 +23,18 @@ $textColor: $fg;
   --bg-color: var(--bg);
 }
 
+// selection colours
 ::selection, ::-moz-selection {
   background-color: var(--text-color);
   color: var(--bg-color);
 }
 
 time {
+  font-family: $fontSans;
   font-size: .8em;
 }
 
+// Print layout {{{
 @media only print {
   body, main { background-color: transparent !important; }
 
@@ -47,6 +42,7 @@ time {
 
   body > header, body > footer { display: none !important; }
 }
+// }}}
 
 body {
   background: var(--body-color);
@@ -134,11 +130,14 @@ body > .content {
 }
 
 // Tabs {{{
-body > .content > nav:first-child {
+body > .content > .tab-bar {
   background-color: var(--body-color);
   width: 100%;
   margin: 0;
   border-bottom: 1px solid var(--hi);
+
+  white-space: nowrap;
+  overflow-x: auto;
 
   > ul {
     @include util.inline-list;
@@ -149,6 +148,7 @@ body > .content > nav:first-child {
       color: var(--text-color);
       display: inline-block;
 
+      // current tab
       &[aria-current=page] {
         background-color: var(--hi);
       }
@@ -157,13 +157,19 @@ body > .content > nav:first-child {
 }
 // }}}
 
-// this is only there for the REALLY old browsers [ hi lynx :) ]
+.translation-pager {
+  @include util.inline-list(0);
+  display: flex;
+  > li, > a {
+    flex-grow: 1;
+    @include buttons.empty(var(--hi), var(--bg));
+  }
+}
+
+// that’s only there for the REALLY old browsers [ hi lynx :) ]
 body > footer > hr { display: none; }
 
-.inset {
-  border: 5px inset var(--hi);
-  padding: 1em;
-}
+.inset { @include util.block(); }
 
 a.more-link, a.more-link:visited {
   @include buttons.empty(var(--text-color), var(--hi))

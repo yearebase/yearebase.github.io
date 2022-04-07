@@ -13,21 +13,21 @@
 
   <ul class="post-tags">
     {% for tag in post.data.tags %}
-      <li>
         {% if tag == "poem" %}
-          <a href="/poems/{{ 'cs' if locale == 'cs' else '' }}">
-            {%- if locale == 'cs' -%}
-              básně
-            {%- else -%}
-              poems
-            {%- endif -%}
+          <a href="/poems/{{ 'cs' if locale == 'cs' else '' }}"> {#- -#}
+            <li> {#- -#}
+              {%- if locale == 'cs' -%}
+                básně
+              {%- else -%}
+                poems
+              {%- endif -%}
+            </li> {#- -#}
           </a>
         {%- elif tag == "blog" %}
-          <a href="/blog/{{ 'cs' if locale == 'cs' else '' }}">blog</a>
+          <a href="/blog/{{ 'cs' if locale == 'cs' else '' }}"><li>blog</li></a>
         {%- else -%}
-          {{- tag -}}
+          <li>{{ tag }}</li>
         {%- endif -%}
-      </li>
     {% endfor %}
   </ul>
 {% endmacro %}
