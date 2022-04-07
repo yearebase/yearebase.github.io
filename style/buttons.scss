@@ -1,6 +1,6 @@
 @mixin empty($fg, $bg) {
   display: block;
-  border: 6px solid $fg;
+  border: 6px solid $bg;
   padding: 6px;
   color: $fg;
   background-color: $bg;

@@ -8,7 +8,9 @@
 
 .post-list > li {
   margin: 0;
-  padding: .75em 0;
+  padding: 0;
+
+  & + li { padding-top: 1.25em; }
 }
 
 .__split-v {

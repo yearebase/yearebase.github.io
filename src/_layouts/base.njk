@@ -45,6 +45,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="@tadeassoucek">
+  <meta name="twitter:site" content="@YeAreBase">
 </head>
 
 {% macro translationPager() -%}
@@ -75,9 +76,29 @@
     </nav>
   </aside>
 
-  <main>
-    {{ content }}
-  </main>
+  <div class="content">
+    <nav>
+      <ul>
+        {% macro _link(text, url) %}
+          {% if not url %} {% set url = "/" + text + '/' %} {% endif %}
+          <a href="{{ url }}{{ locale + "/" if locale != "en" else "" }}"
+             {%- if section == text %} aria-current="page" {%- endif %}>
+            <li>{{ text | t(locale) | capitalize }}</li>
+          </a>
+        {% endmacro %}
+
+        {{ _link("home", "/") }}
+        {{ _link("all") }}
+        {{ _link("blog") }}
+        {{ _link("poems") }}
+        {{ _link("about") }}
+        {{ _link("updates") }}
+      </ul>
+    </nav>
+    <main>
+      {{ content }}
+    </main>
+  </div>
 
   <footer>
     <hr>

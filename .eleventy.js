@@ -1,7 +1,9 @@
-const htmlmin = require("html-minifier");
-const Nunjucks = require("nunjucks");
 const { lib: mdit, renderMD } = require("./config/mditSetup.js");
 const pairedShortcodes = require("./config/pairedShortcodes.js");
+const localize = require("./config/localize.js");
+
+const htmlmin = require("html-minifier");
+const Nunjucks = require("nunjucks");
 const YAML = require("yaml");
 
 const languages = {
@@ -33,6 +35,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("getLang", (code) => languages[code]);
   eleventyConfig.addFilter("allLangs", () => Object.keys(languages));
+  eleventyConfig.addFilter("t", localize);
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath)

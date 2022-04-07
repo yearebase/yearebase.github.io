@@ -7,6 +7,7 @@ postList:
   selector: "post"
 
 title: All
+section: all
 
 translations:
   cs: cs

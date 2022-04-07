@@ -42,4 +42,4 @@ Another thing I’ve thought of is putting a recommendation section in here some
 
 All of the code powering this website is available [online](https://github.com/yearebase/yearebase.github.io) and licenced under the MIT licence, meaning you can do pretty much anything with it.
 
-As for the texts on this site, they are all licenced under the [Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses/by/4.0/). That means you can use any of it anywhere else, even for commercially, and modify it to your heart’s content, provided you attribute the original to me.
+As for the texts on this site, they are all licenced under the [Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses/by/4.0/). That means you can use any of it anywhere else, even for commercial purposes, and modify it to your heart’s content, provided you attribute the original to me.

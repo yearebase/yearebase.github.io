@@ -3,6 +3,16 @@
 .poem {
   font-family: 'Xanh Mono', monospace;
   font-size: 1.2em;
+
+  > header > h1 {
+    font-size: 1.4em;
+  }
+
+  .content {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
 }
 
 .phantom {

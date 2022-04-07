@@ -7,6 +7,7 @@ postList:
   selector: "post"
 
 title: Domů
+section: home
 
 translations:
   en: ..

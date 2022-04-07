@@ -28,10 +28,10 @@
      inkscape:guide-bbox="true"
      inkscape:zoom="10.413913"
      inkscape:cx="16.180277"
-     inkscape:cy="25.398714"
+     inkscape:cy="23.958333"
      inkscape:window-width="1920"
      inkscape:window-height="1002"
-     inkscape:window-x="0"
+     inkscape:window-x="1920"
      inkscape:window-y="37"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
@@ -47,7 +47,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#7dbea6;fill-opacity:1;stroke-width:0.174526"
+       style="fill:#111111;fill-opacity:1;stroke-width:0.174526"
        id="rect3482"
        width="12.752916"
        height="12.752916"
@@ -56,16 +56,16 @@
        inkscape:label="Background" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:21.0541px;line-height:1.25;font-family:sans-serif;fill:#1d036d;fill-opacity:1;stroke:none;stroke-width:0.526351"
-       x="2.255367"
-       y="14.675075"
-       id="text1840"
-       transform="scale(1.6744402,0.59721453)"
+       style="font-style:normal;font-weight:normal;font-size:11.2895px;line-height:1.25;font-family:sans-serif;fill:#ee4b6a;fill-opacity:1;stroke:none;stroke-width:0.282238"
+       x="2.2319095"
+       y="10.510412"
+       id="text2711"
+       transform="scale(0.99559281,1.0044267)"
        inkscape:label="y"><tspan
          sodipodi:role="line"
-         id="tspan1838"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Outward;-inkscape-font-specification:Outward;fill:#1d036d;fill-opacity:1;stroke-width:0.526351"
-         x="2.255367"
-         y="14.675075">y</tspan></text>
+         id="tspan2709"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Libre Franklin';-inkscape-font-specification:'Libre Franklin';fill:#ee4b6a;fill-opacity:1;stroke-width:0.282238"
+         x="2.2319095"
+         y="10.510412">Y</tspan></text>
   </g>
 </svg>
