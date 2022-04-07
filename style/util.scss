@@ -8,3 +8,8 @@
     & + li { margin-left: $gap; }
   }
 }
+
+@mixin block() {
+  padding: 1rem;
+  border-left: 4px solid var(--hi);
+}

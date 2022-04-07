@@ -1,4 +1,7 @@
+@use "util";
+
 pre {
   width: auto;
   overflow-x: auto;
+  @include util.block();
 }

@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap");
 .poem {
   font-family: "Xanh Mono", monospace;
   font-size: 1.2em;
+}
+.poem.embedded {
+  padding: 1rem;
+  border-left: 4px solid var(--hi);
 }
 .poem > header > h1 {
   font-size: 1.4em;

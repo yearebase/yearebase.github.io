@@ -12,7 +12,6 @@ $bodyColor: $bg;
 $bgColor: $bg;
 
 $highlightColor: $hi;
-$linkColor: $hi;
 
 $textColor: $fg;
 
@@ -24,12 +23,12 @@ $textColor: $fg;
   --fg: #{$fg};
   --hi: #{$hi};
 
-  --link-color: #{$linkColor};
-  --headline-color: #{$highlightColor};
-  --text-color: #{$textColor};
-  --body-color: #{$bodyColor};
+  --link-color: var(--hi);
+  --headline-color: var(--hi);
+  --text-color: var(--fg);
+  --body-color: var(--bg);
 
-  --bg-color: #{$bgColor};
+  --bg-color: var(--bg);
 }
 
 ::selection, ::-moz-selection {
@@ -38,7 +37,6 @@ $textColor: $fg;
 }
 
 time {
-  font-family: monospace;
   font-size: .8em;
 }
 
@@ -64,7 +62,10 @@ a, a:visited { color: var(--link-color); }
 
 a.logo {
   display: block;
-  > img { width: 100%; }
+  > img {
+    width: 100%;
+    max-height: 10rem;
+  }
 }
 
 // Headlines {{{
@@ -73,6 +74,7 @@ $headline-font-sizes: [3rem, 2.5rem, 1.8rem, 1.4rem, 1.2rem, 1rem];
 
 @for $i from 1 through 6 {
   h#{$i} {
+    font-family: 'Xanh Mono', monospace;
     font-size: list.nth($headline-font-sizes, $i);
     margin: .3em 0;
     color: var(--headline-color);
