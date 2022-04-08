@@ -10,6 +10,8 @@
 
   <title>{{ title | renderMD }} ~ YeAreBase</title>
 
+  {# Icons {{{ #}
+  {# Favicons {{{ #}
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="shortcut icon" sizes="16x16" href="/favicon-16x16.png">
   <link rel="shortcut icon" sizes="32x32" href="/favicon-32x32.png">
@@ -18,24 +20,33 @@
   <link rel="shortcut icon" sizes="128x128" href="/favicon-128x128.png">
   <link rel="shortcut icon" sizes="256x256" href="/favicon-256x256.png">
   <link rel="shortcut icon" sizes="512x512" href="/favicon-512x512.png">
+  {# }}} #}
 
   <link rel="apple-touch-icon" href="/favicon-128x128.png">
+  {# }}} #}
   
-  <meta name="theme-color" content="#191919">
-  <meta name="msapplication-TileColor" content="#191919">
+  {# Theme colours {{{ #}
+  <meta name="theme-color" content="#111">
+  <meta name="msapplication-TileColor" content="#111">
+  {# }}} #}
 
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/res/fonts/outward/outward.css">
-
+  {# Google fonts {{{ #}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+  {# }}} #}
+
+  {# My stylesheets {{{ #}
+  <link rel="stylesheet" href="/css/base.css">
 
   {% for ss in stylesheets %}
     <link rel="stylesheet" href="/css/{{ ss }}.css">
   {% endfor %}
+  {# }}} #}
 
+  {# Metadata {{{ #}
+  {# OpenGraph {{{ #}
   <meta property="og:type" content="{{ "article" if isPost else "website" }}">
   <meta property="og:title" content="{{ title }}">
   {% if subtitle %}
@@ -43,10 +54,14 @@
   {% endif %}
   <meta property="og:site_name" content="YeAreBase">
   <meta property="og:locale" content="{{ locale }}">
+  {# }}} #}
 
+  {# Twitter {{{ #}
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="@tadeassoucek">
   <meta name="twitter:site" content="@YeAreBase">
+  {# }}} #}
+  {# }}} #}
 </head>
 
 {% macro translationPager() -%}
@@ -62,18 +77,21 @@
 {% endmacro %}
 
 <body>
+  {# Header {{{ #}
   <header>
-    {% set homeURL = '/' + ('' if locale == 'en' else locale + '/') %}
-    <a class="logo" href="{{ homeURL }}"><img src="/res/img/logo-colour-scheme.svg" alt="YeAreBase"></a>
-  </header>
-
-  <aside class="sidebar">
+    {%- set homeURL = '/' + ('' if locale == 'en' else locale + '/') -%}
+    <a class="logo" href="{{ homeURL }}"> {#- -#}
+      <img src="/res/img/logo-colour-scheme.svg" alt="YeAreBase"> {#- -#}
+    </a>
     <nav>
-      {{ translationPager() }}
+      {{- translationPager() -}}
     </nav>
-  </aside>
+    <hr>
+  </header>
+  {# }}} #}
 
   <div class="content">
+    {# Tab bar {{{ #}
     <nav class="tab-bar">
       <ul>
         {% macro _link(text, url) %}
@@ -84,60 +102,51 @@
           </a>
         {% endmacro %}
 
-        {{ _link("home", "/") }}
-        {{ _link("all") }}
-        {{ _link("blog") }}
-        {{ _link("poems") }}
-        {{ _link("about") }}
-        {{ _link("updates") }}
+        {{- _link("home", "/") -}}
+        {{- _link("all") -}}
+        {{- _link("blog") -}}
+        {{- _link("poems") -}}
+        {{- _link("about") -}}
+        {{- _link("updates") -}}
       </ul>
     </nav>
+    {# }}} #}
+
     <main>
       {{ content }}
     </main>
   </div>
 
+  {# Footer {{{ #}
   <footer>
     <hr>
 
-    <nav>
-      <ul>
-        {%- if locale == "cs" -%}
-          <li><a href="{{ homeURL }}">Domů</a></li> {#- -#}
-          <li><a href="#">Zpět nahoru</a></li>
-        {%- else -%}
-          <li><a href="{{ homeURL }}">Go home</a></li> {#- -#}
-          <li><a href="#">Go to top</a></li>
-        {%- endif -%}
-      </ul>
-      {{ translationPager() }}
-    </nav>
-
-    <ul class="license-notice"> {#- -#}
-      <li>
-        {%- if locale == "cs" -%}
-          <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
-          <a href="https://opensource.org/licenses/MIT">licencí MIT</a>.
-        {%- else -%}
-          <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
-          <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
-        {%- endif -%}
-      </li>
-
-      {%- if isPost -%}
-        <li>
-          {%- if locale == "cs" -%}
-            Tento text je licencován pod
-          {%- else -%}
-            This text is licenced under
-          {%- endif %}
-          <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
-            {{- (license and license.name) or "CC BY 4.0" -}}
-          </a>.
-        </li>
+    {# Licence notice {{{ #}
+    <p>
+      {%- if locale == "cs" -%}
+        <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
+        <a href="https://opensource.org/licenses/MIT">licencí MIT</a>.
+      {%- else -%}
+        <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
+        <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
       {%- endif -%}
-    </ul>
+    </p>
+
+    {%- if isPost -%}
+      <p>
+        {%- if locale == "cs" -%}
+          Tento text je licencován pod
+        {%- else -%}
+          This text is licenced under
+        {%- endif %}
+        <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
+          {{- (license and license.name) or "CC BY 4.0" -}}
+        </a>.
+      </p>
+    {%- endif -%}
+    {# }}} #}
   </footer>
+  {# }}} #}
 </body>
 
 </html>
