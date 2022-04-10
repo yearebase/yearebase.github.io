@@ -49,6 +49,10 @@ body {
   color: var(--text-color);
 }
 
+.split-v > *:not(:first-child) {
+  border-top: 4px solid var(--hi);
+}
+
 *:target::after {
   content: "←";
   margin-left: .4em;
@@ -114,6 +118,13 @@ main > *:first-child { margin-top: 0; }
     > .content { grid-area: content; }
     > footer { grid-area: footer; }
   }
+
+  .split-v {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > *:not(:first-child) { border-top: none; }
+  }
 }
 // }}}
 
@@ -143,7 +154,8 @@ body > footer {
 
 // Tabs {{{
 body > .content > .tab-bar {
-  background-color: var(--body-color);
+  background: none;
+  //background-color: var(--body-color);
   width: 100%;
   margin: 0;
   border-bottom: 1px solid var(--hi);
@@ -156,14 +168,9 @@ body > .content > .tab-bar {
     margin: 0;
 
     a {
-      padding: .5em 1em;
-      color: var(--text-color);
+      margin: 0;
+      @include buttons.empty(var(--hi), var(--bg), $padding: .5em 1em);
       display: inline-block;
-
-      // current tab
-      &[aria-current=page] {
-        background-color: var(--hi);
-      }
     }
   }
 }
@@ -172,8 +179,10 @@ body > .content > .tab-bar {
 .translation-pager {
   @include util.inline-list(0);
   display: flex;
+
   > li, > a {
     flex-grow: 1;
+    display: block;
     @include buttons.empty(var(--hi), var(--bg));
   }
 }
@@ -187,5 +196,6 @@ body > footer {
 .inset { @include util.block(); }
 
 a.more-link, a.more-link:visited {
-  @include buttons.empty(var(--text-color), var(--hi))
+  @include buttons.empty(var(--text-color), var(--hi));
+  display: block;
 }

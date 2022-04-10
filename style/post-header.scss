@@ -1,5 +1,10 @@
 @use "util";
 
+.post-lang {
+  color: var(--hi);
+  font-size: .8em;
+}
+
 .post-title {
   font-size: 2rem;
   margin: 0;
@@ -10,6 +15,8 @@
   margin-top: .1em;
   font-size: 1.3rem;
   font-style: italic;
+
+  em, cite { font-style: normal; }
 }
 
 .post-tags {

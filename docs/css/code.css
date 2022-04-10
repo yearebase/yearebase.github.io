@@ -1,8 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+pre, code {
+  font-family: "Iosevka", "IBM Plex Mono", "Ubuntu Mono", "Consolas", monospace;
+  font-size: 0.9rem;
+}
+
 pre {
   width: auto;
   overflow-x: auto;
   padding: 1rem;
   border-left: 4px solid var(--hi);
+}
+
+.hljs-string,
+.hljs-tag {
+  color: #aaa;
+}
+
+.hljs-selector-class,
+.hljs-name {
+  color: var(--hi);
+}
+
+.hljs-attribute,
+.hljs-attr {
+  color: var(--hi-alt);
 }
 
 /*# sourceMappingURL=code.css.map */

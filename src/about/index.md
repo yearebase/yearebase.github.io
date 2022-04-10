@@ -5,6 +5,7 @@ title: About
 
 translations:
   cs: cs
+  tok: tok
 
 stylesheets: [poetry]
 ---

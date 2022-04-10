@@ -98,7 +98,7 @@
           {% if not url %} {% set url = "/" + text + '/' %} {% endif %}
           <a href="{{ url }}{{ locale + "/" if locale != "en" else "" }}"
              {%- if section == text %} aria-current="page" {%- endif %}>
-            <li>{{ text | t(locale) | capitalize }}</li>
+            <li>{{ text | t(locale) | lcapitalize(locale) }}</li>
           </a>
         {% endmacro %}
 

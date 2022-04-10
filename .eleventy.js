@@ -8,7 +8,8 @@ const YAML = require("yaml");
 
 const languages = {
   en: 'english',
-  cs: 'česky'
+  cs: 'česky',
+  tok: 'toki pona'
 };
 
 module.exports = function (eleventyConfig) {
@@ -35,7 +36,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("getLang", (code) => languages[code]);
   eleventyConfig.addFilter("allLangs", () => Object.keys(languages));
-  eleventyConfig.addFilter("t", localize);
+
+  for (const key in localize)
+    eleventyConfig.addFilter(key, localize[key]);
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath)

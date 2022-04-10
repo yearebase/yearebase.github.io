@@ -31,8 +31,8 @@
 .post-list-pager ul > li, .post-list-pager ul > a > li {
   display: inline-block;
 }
-.post-list-pager ul > li + li, .post-list-pager ul > a > li + li {
-  margin-left: 1em;
+.post-list-pager ul > *:not(:last-child) {
+  margin-right: 1em;
 }
 
 /*# sourceMappingURL=post-list.css.map */

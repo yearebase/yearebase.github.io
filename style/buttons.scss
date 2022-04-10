@@ -1,7 +1,5 @@
-@mixin empty($fg, $bg) {
-  display: block;
-  border: 6px solid $bg;
-  padding: 6px;
+@mixin empty($fg, $bg, $padding: 6px) {
+  padding: $padding;
   color: $fg;
   background-color: $bg;
   text-align: center;

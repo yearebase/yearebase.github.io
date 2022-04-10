@@ -5,6 +5,9 @@ title: About
 
 translations:
   en: ..
+  tok: ../tok
+
+stylesheets: [poetry]
 ---
 
 # {{ title }}
@@ -29,12 +32,6 @@ V přibližném překladu znamená: „To vy jste mrzcí!“ Tuto frázi jsem vz
     {% endstanza %}
   {% endpoem %}
 </blockquote>
-
-## Proč tenhle design? [[#design]]
-
-Troška historie: předchůdce této stránky měl být můj osobní blog, který *měl být* vrcholem mých web-dělajících schopností. Nakonec mě přestal bavit a já jsem ho na dobu uložil k ledu. Pak jsem narazil na [NeoCities](https://neocities.org) a komunity okolo starého webu (jako třeba [YesterWeb](https://yesterweb.org)), a to můj zájem oživilo. Nakonec jsem vybral jméno (viz [nahoře](#name) proč zrovna tohle), vytvořil jsem základní kostru a dal jsem online.
-
-Design téhle stránky byl původně minimalistický šedo-bílý blog, který se mi ale moc nelíbil, a tak jsem se rozhodl předesignovat to na něco jiného. Něco hloupějšího, odvázanějšího, relaxovanějšího, bližšího starému webu. A tohoto jsem docílil tím, že jsem… změnil barvy z „bílé na černé“ na „černou na světle růžové na světle modré“, což, upřímně řečeno, dobře nevypadalo. Nakonec jsem vytvořil tento systém s různými schématy, které jsou vskutku odvázané a mění se ze stránky na stránku. Musím uznat že to není nejhezčí, ale i tak se mi to svým způsobem líbí. Upřímně, jsem trochu unavený z moderního trendu minimalistických designů s velkými, tučnými, geometrickými fonty a údernými primárními barvami. Stránky takto udělané vypadají dobře, nechápejte mě špatně, ale mohou být trochu na jedno brdo.
 
 ## Co se připravuje? [[#future]]
 

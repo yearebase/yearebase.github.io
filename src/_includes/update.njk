@@ -4,8 +4,8 @@
   <li>
     {{ showDate(update.date, "update-date") }}
     <div>
-      <h3 class="update-title">{{ update.title[locale] | renderMD }}</h3>
-      <p class="update-summary">{{ update.summary[locale] | renderMD }}</p>
+      <h3 class="update-title">{{ (update.title[locale] or update.title.en) | renderMD }}</h3>
+      <p class="update-summary">{{ (update.summary[locale] or update.summary.en) | renderMD }}</p>
     </div>
   </li>  
 {% endmacro %}
@@ -18,11 +18,7 @@
       {% endfor %}
     </ul>
     <a class="more-link" href="/updates/{{ '' if locale == 'en' else locale }}">
-      {%- if locale == 'cs' %}
-        Všechny změny
-      {%- else -%}
-        All updates
-      {%- endif -%}
+      {{- "all updates" | t(locale) | lcapitalize(locale) -}}
     </a>
   </article>
 {% endmacro %}

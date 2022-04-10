@@ -1,14 +1,14 @@
 ---
-locale: en
+locale: tok
 
 layout: post-list
 postList:
   selector: "post"
 
-title: All
+title: lipu ale
 section: all
 
 translations:
-  cs: cs
-  tok: tok
+  en: ..
+  cs: ../cs
 ---

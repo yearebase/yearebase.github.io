@@ -1,15 +1,19 @@
 - title:
     en: "Style overhaul"
     cs: "Změna vzhledu"
+    tok: "lukin ante"
   summary:
     en: "That’s right! I picked a blasted colour combination!"
     cs: "Ano! Vybral jsem barevnou kombinaci!"
+    tok: "ni li lon a! mi ante e kule!"
   date: 2022-03-21
 
 - title:
     en: "Added the update section"
     cs: "Přidal jsem oddíl s updaty"
+    tok: "mi namako e lipu pi lipu ante"
   summary:
     en: "[This section](/updates/) shows what’s changed on the website"
     cs: "[Tento oddíl](/updates/cs/) ukazuje, co se na stránce změnilo"
+    tok: "[lipu ni](/updates/tok/) li jo e ante pi lipu ni pi ilo nanpa"
   date: 2022-03-19

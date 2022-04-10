@@ -2,7 +2,7 @@
 locale: cs
 
 title: Císařův nový obličej
-subtitle: "Mayenburgova komedie _Ošklivec_ nabízí humorný pohled na plastické operace a ztrátu identity."
+subtitle: "Mayenburgova komedie <cite>Ošklivec</cite> nabízí humorný pohled na plastické operace a ztrátu identity."
 date: 2022-02-05
 
 tags: [blog]

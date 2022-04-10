@@ -1,13 +1,13 @@
 ---
-locale: cs
+locale: tok
 
 layout: post-list
 postList:
   selector: "poem"
 
-title: Básně
+title: lipu lili musi
 
 translations:
   en: ..
-  tok: ../tok
+  cs: ../cs
 ---

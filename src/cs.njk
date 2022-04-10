@@ -1,18 +1,18 @@
 ---
-locale: en
+locale: cs
 layout: base
 
-title: Home
+title: Domů
 section: home
 
 stylesheets: [update-list, post-list, post-header]
 
 translations:
-  cs: cs
-  tok: tok
+  en: ..
+  tok: ../tok
 ---
 
-<h1>Welcome to my website!</h1>
+<h1>Vítejte na mojí stránce!</h1>
 
 <div class="split-v">
   {% from "post.njk" import showPostListPreview %}
@@ -22,4 +22,4 @@ translations:
   {{ showUpdateListPreview(updates, 3, locale) }}
 </div>
 
-<p>Wanna know what this is about? Head over to the helpfully titled <a href="/about/">About page!</a></p>
+<p>Chcete vědět, o čem tohle je? Podívejte se na stránku <a href="/about/cs/">About!</a></p>

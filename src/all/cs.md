@@ -3,12 +3,12 @@ locale: cs
 
 layout: post-list
 postList:
-  title: Vše
   selector: "post"
 
-title: Domů
-section: home
+title: Vše
+section: all
 
 translations:
   en: ..
+  tok: ../tok
 ---
