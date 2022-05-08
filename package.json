@@ -5,13 +5,13 @@
   "private": true,
   "main": ".eleventy.js",
   "scripts": {
-    "clean": "rm -rf docs/*",
+    "clean": "rm -rf built/*",
     "build": "npx @11ty/eleventy",
     "dry": "npx @11ty/eleventy --dryrun",
     "watch": "npx @11ty/eleventy --watch",
     "minify": "node scripts/minify.mjs",
     "serve": "npx @11ty/eleventy --serve",
-    "compile-sass": "npx sass style:docs/css"
+    "compile-sass": "npx sass style:built/css"
   },
   "keywords": [],
   "license": "MIT",

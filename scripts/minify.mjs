@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/* Minifies all the HTML, CSS, and JavaScript files in `docs/`, reporting total and per-file reductions in size. */
+/* Minifies all the HTML, CSS, and JavaScript files in `built/`, reporting total and per-file reductions in size. */
 
 import { minify } from "minify";
 import * as fs from "fs/promises";
@@ -26,14 +26,7 @@ const reduction = (oldSize, newSize) => {
 };
 
 !async function() {
-  const stat = await fs.stat("docs/css/util")
-    .catch((err) => {});
-
-  if (stat)
-    await fs.rm("docs/css/util", { recursive: true })
-      .catch((err) => console.error("Failed to delete directory docs/css/util:", err));
-
-  glob("docs/**/*.*", null, async (err, files) => {
+  glob("built/css/*.*", null, async (err, files) => {
     console.error("Files:", files, '\n');
     if (!files) process.exit(1);
 
@@ -46,7 +39,7 @@ const reduction = (oldSize, newSize) => {
     ];
 
     for (const fp of files) {
-      if (!fp.match(/\.(html|css|js)$/)) continue;
+      if (!fp.match(/\.css$/)) continue;
 
       const stats = await fs.stat(fp).catch(err => logErr(fp, "get size of", err));
       if (!stats)

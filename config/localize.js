@@ -4,7 +4,7 @@ const translations = {
   "blog": { tok: "lipu tenpo" },
   "poem": { cs: "báseň", tok: "lipu lili musi" },
   "poems": { cs: "básně", tok: "lipu lili musi" },
-  "updates": { cs: "updaty", tok: "lipu ante" },
+  "updates": { cs: "změny", tok: "lipu ante" },
   "dream": { cs: "sen", tok: "sitelen lawa pi tenpo pimeja" },
   "programming": { cs: "programování", tok: "sitelen pi ilo nanpa" },
   "all posts": { cs: "všechny posty", tok: "lipu ale" },

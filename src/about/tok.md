@@ -18,7 +18,7 @@ mi [jan Tateo](https://github.com/tadeassoucek). mi pali e lipu ni pi ilo nanpa.
 
 mi sona ala. tenpo mute la mi pali e ilo nanpa. taso mi pali e ijo ante.
 
-## „Ye Are Base“ tan seme? [[#name]]
+## „Ye Are Base“ li tan seme? [[#name]]
 
 sitelen ni li toki e ni: “sina li anpa!”. ona li tan lipu musi [_Bastard Born_](https://theanarchistlibrary.org/library/voltairine-de-cleyre-bastard-born) tan jan Voltairine de Cleyre:
 

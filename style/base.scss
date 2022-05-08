@@ -10,8 +10,8 @@ $fontSans: 'Libre Franklin', 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
   font-size: 14pt;
   font-family: $fontSans;
 
-  --bg: #111;
-  --fg: white;
+  --bg: white;
+  --fg: black;
   --hi: #EE4B6A;
   --hi-alt: #F08296;
 
@@ -177,14 +177,18 @@ body > .content > .tab-bar {
 // }}}
 
 .translation-pager {
-  @include util.inline-list(0);
-  display: flex;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  @include buttons.empty(var(--hi), var(--bg));
+  outline: none;
+  border: none;
+}
 
-  > li, > a {
-    flex-grow: 1;
-    display: block;
-    @include buttons.empty(var(--hi), var(--bg));
-  }
+.translation-pager-fallback {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
 }
 
 // these are only there for the REALLY old browsers [ hi lynx :) ]
@@ -196,6 +200,6 @@ body > footer {
 .inset { @include util.block(); }
 
 a.more-link, a.more-link:visited {
-  @include buttons.empty(var(--text-color), var(--hi));
+  @include buttons.empty(var(--bg), var(--hi));
   display: block;
 }
