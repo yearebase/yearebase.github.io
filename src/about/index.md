@@ -33,12 +33,6 @@ It’s a line from Voltairine de Cleyre’s 1891 poem [_Bastard Born_](https://t
   {% endpoem %}
 </blockquote>
 
-## What’s in store? [[#future]]
-
-I plan on putting this site on the [YesterWeb webring](https://yesterweb.org/webring/), but I have to add more stuff first. Also, I’ll probably add an updates section.
-
-Another thing I’ve thought of is putting a recommendation section in here somewhere. That would be of no use to anybody, but would allow me to get it out of my system.
-
 ## What about the licence? [[#licence]]
 
 All of the code powering this website is available [online](https://github.com/yearebase/yearebase.github.io) and licenced under the MIT licence, meaning you can do pretty much anything with it.

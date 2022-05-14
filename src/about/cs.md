@@ -33,12 +33,6 @@ V přibližném překladu znamená: „To vy jste mrzcí!“ Tuto frázi jsem vz
   {% endpoem %}
 </blockquote>
 
-## Co se připravuje? [[#future]]
-
-Plánuji tuhle stránku přidat na [YesterWeb webring](https://yesterweb.org/webring/), ale nejdřív budu muset přidat víc věcí. Také plánuji přidat oddíl pro změny.
-
-Další věc, která mě napadla, je přidat sem někam oddíl pro doporučování věcí. To by nikomu nepomohlo, ale dovolilo by mi to vypustit to ze systému.
-
 ## Co licence? [[#licence]]
 
 Všechen kód, na kterém tato stránka běží, je nalezitelný [online](https://github.com/yearebase/yearebase.github.io) a licencovaný pod MIT licencí, což znamená, že s ním můžete dělat, co chcete.
