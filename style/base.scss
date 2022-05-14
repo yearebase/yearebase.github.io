@@ -70,7 +70,7 @@ a.logo {
   display: block;
   > img {
     width: 100%;
-    max-height: 10rem;
+    max-height: 8rem;
   }
 }
 
@@ -90,8 +90,6 @@ $headline-font-sizes: [3rem, 2.2rem, 1.6rem, 1.2rem, 1rem, 1rem];
     margin-top: 0;
   }
 }
-
-h1 { line-height: .85em; }
 
 // }}}
 

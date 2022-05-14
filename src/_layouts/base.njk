@@ -153,21 +153,26 @@
       {%- else -%}
         <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
         <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
-      {%- endif -%}
-    </p>
+      {% endif %}
 
-    {%- if isPost -%}
-      <p>
-        {%- if locale == "cs" -%}
+      {% if isPost %}
+        {% if locale == "cs" %}
           Tento text je licencován pod
-        {%- else -%}
+        {% else %}
           This text is licenced under
-        {%- endif %}
+        {% endif %}
         <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
           {{- (license and license.name) or "CC BY 4.0" -}}
         </a>.
-      </p>
-    {%- endif -%}
+      {% endif %}
+
+      {% if locale == "cs" %}
+        Pokud jste našli chybu, <a href="/about/cs/#contact">napište mi.</a>
+      {% else %}
+        If you’ve found a mistake, <a href="/about/#contact">contact me.</a>
+      {% endif %}
+    </p>
+
     {# }}} #}
   </footer>
   {# }}} #}
