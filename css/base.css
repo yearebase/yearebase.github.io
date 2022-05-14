@@ -63,7 +63,7 @@ a.logo {
 }
 a.logo > img {
   width: 100%;
-  max-height: 10rem;
+  max-height: 8rem;
 }
 
 h1 {
@@ -130,10 +130,6 @@ h6 {
 
 h6 + p {
   margin-top: 0;
-}
-
-h1 {
-  line-height: 0.85em;
 }
 
 body {
@@ -215,6 +211,7 @@ body > .content > .tab-bar > ul > *:not(:last-child) {
 }
 body > .content > .tab-bar > ul a {
   margin: 0;
+  font-size: 0.8em;
   padding: 0.5em 1em;
   color: var(--hi);
   background-color: var(--bg);
@@ -231,6 +228,7 @@ body > .content > .tab-bar > ul a[aria-current=page] {
   display: block;
   box-sizing: border-box;
   width: 100%;
+  font-size: 0.8em;
   padding: 6px;
   color: var(--hi);
   background-color: var(--bg);
@@ -261,6 +259,7 @@ body > footer hr {
 }
 
 a.more-link, a.more-link:visited {
+  font-size: 0.8em;
   padding: 6px;
   color: var(--bg);
   background-color: var(--hi);
