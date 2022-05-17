@@ -5,7 +5,7 @@ layout: base
 title: lipu lawa
 section: home
 
-stylesheets: [update-list, post-list, post-header]
+stylesheets: [update-list, post-list, post-header, index]
 
 translations:
   en: ..
@@ -23,3 +23,6 @@ translations:
 </div>
 
 <p>sina wile ala wile sona e tan pi lipu ni pi ilo nanpa? wile la, o tawa <a href="/about/tok/">lipu About!</a></p>
+
+{% from "webring.njk" import webring %}
+{{ webring(locale) }}

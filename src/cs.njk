@@ -5,7 +5,7 @@ layout: base
 title: Domů
 section: home
 
-stylesheets: [update-list, post-list, post-header]
+stylesheets: [update-list, post-list, post-header, index]
 
 translations:
   en: ..
@@ -22,4 +22,7 @@ translations:
   {{ showUpdateListPreview(updates, 3, locale) }}
 </div>
 
-<p>Chcete vědět, o čem tohle je? Podívejte se na stránku <a href="/about/cs/">About!</a></p>
+<p>Chcete vědět, o co kráčí? Podívejte se na sekci <a href="/about/cs/">About!</a></p>
+
+{% from "webring.njk" import webring %}
+{{ webring(locale) }}

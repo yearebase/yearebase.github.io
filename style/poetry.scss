@@ -1,9 +1,6 @@
 @use "util";
 
 .poem {
-  font-family: 'Xanh Mono', monospace;
-  font-size: 1.2em;
-
   &.embedded {
     @include util.block();
   }

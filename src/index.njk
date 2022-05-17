@@ -5,7 +5,7 @@ layout: base
 title: Home
 section: home
 
-stylesheets: [update-list, post-list, post-header]
+stylesheets: [update-list, post-list, post-header, index]
 
 translations:
   cs: cs
@@ -23,3 +23,6 @@ translations:
 </div>
 
 <p>Wanna know what this is about? Head over to the helpfully titled <a href="/about/">About page!</a></p>
+
+{% from "webring.njk" import webring %}
+{{ webring(locale) }}

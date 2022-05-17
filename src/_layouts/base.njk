@@ -145,12 +145,24 @@
   <footer>
     <hr>
 
+    <p>
+      <a href="#">
+        {%- if locale == "cs" -%}
+          Zpět nahoru.
+        {%- elif locale == "tok" -%}
+          lon sewi.
+        {%- else -%}
+          Back to top.
+        {%- endif -%}
+      </a>
+    </p>
+
     {# Licence notice {{{ #}
     <p>
-      {%- if locale == "cs" -%}
+      {% if locale == "cs" %}
         <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
         <a href="https://opensource.org/licenses/MIT">licencí MIT</a>.
-      {%- else -%}
+      {% else %}
         <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
         <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
       {% endif %}

@@ -1,4 +1,14 @@
 - title:
+    en: "Added to the YesterWeb webring!"
+    cs: "Přidáno na webring YesterWebu!"
+    tok: "lipu ni li lon lipu YesterWeb webring"
+  summary:
+    en: "[YesterWeb.org](https://yesterweb.org) is kind of what inspired me to make this site. You can use the widget present on the [main page](/) to hunt for other websites to look at."
+    cs: "[YesterWeb.org](https://yesterweb.org) je v podstatě to, co mě inspirovalo k tomu, abych tuhle stránku vytvořil. Můžete použít widget přítomný na [hlavní stránce](/) k hledání dalších stránek, na které se podívat."
+    tok: "mi pali e lipu ni tan [lipu YesterWeb.org](https://yesterweb.org). sina ken kepeken ilo lon [lipu tomo](/) tawa ni: o alasa e lipu ante."
+  date: 2022-05-17
+
+- title:
     en: "Style overhaul"
     cs: "Změna vzhledu"
     tok: "lukin ante"
