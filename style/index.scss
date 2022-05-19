@@ -11,13 +11,7 @@
   box-shadow: 1px 1px 4px 1px #777;
   padding: 1em;
 
-  background-image: url(/img/webring-bg.jpg);
-  background-size: cover;
-  $bgColor: white;
-
-  > div {
-    background-color: $bgColor;
-  }
+  background-image: url(/img/heartgrid.gif);
 
   .links {
     list-style: none;
@@ -28,8 +22,6 @@
     > * {
       flex-grow: 1;
       text-align: center;
-
-      background-color: $bgColor;
     }
   }
 }
