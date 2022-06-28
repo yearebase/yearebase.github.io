@@ -1,0 +1,15 @@
+.badges {
+  list-style: none;
+  padding: 0;
+}
+.badges > li {
+  display: inline-block;
+}
+@media only screen and (min-width: 1200px) {
+  .badges {
+    margin: auto;
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

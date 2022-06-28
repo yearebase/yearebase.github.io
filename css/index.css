@@ -1,10 +1,7 @@
 .yw-webring {
   margin: auto;
   margin-top: 3em;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px 1px #777;
-  padding: 1em;
-  background-image: url(/img/heartgrid.gif);
+  text-align: center;
 }
 @media only screen and (min-width: 1200px) {
   .yw-webring {
@@ -18,8 +15,24 @@
   flex-direction: row;
 }
 .yw-webring .links > * {
-  flex-grow: 1;
+  font-size: 0.8em;
+  padding: 6px;
+  color: var(--bg);
+  background-color: var(--hi);
   text-align: center;
+  text-decoration: none;
+  flex-grow: 1;
+  text-decoration: none;
+}
+.yw-webring .links > *[aria-current=page] {
+  background-color: var(--bg);
+  color: var(--hi);
+}
+.yw-webring .links > *:first-child {
+  border-right: 3px solid var(--bg);
+}
+.yw-webring .links > *:last-child {
+  border-left: 3px solid var(--bg);
 }
 
 /*# sourceMappingURL=index.css.map */

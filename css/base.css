@@ -184,6 +184,7 @@ body > .content > main {
 }
 
 body > footer {
+  text-align: center;
   font-size: 0.8rem;
 }
 body > footer, body > footer a, body > footer a:visited {
