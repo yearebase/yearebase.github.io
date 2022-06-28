@@ -7,7 +7,7 @@ translations:
   en: ..
   cs: ../cs
 
-stylesheets: [poetry]
+stylesheets: [about, poetry]
 ---
 
 # {{ title }}

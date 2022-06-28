@@ -1,4 +1,5 @@
 @use "responsive";
+@use "buttons";
 
 .yw-webring {
   margin: auto;
@@ -7,11 +8,7 @@
     width: 60%;
   }
 
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px 1px #777;
-  padding: 1em;
-
-  background-image: url(/img/heartgrid.gif);
+  text-align: center;
 
   .links {
     list-style: none;
@@ -20,8 +17,13 @@
     flex-direction: row;
 
     > * {
+      @include buttons.empty(var(--bg), var(--hi));
+
       flex-grow: 1;
-      text-align: center;
+      text-decoration: none;
+
+      &:first-child { border-right: 3px solid var(--bg); }
+      &:last-child { border-left: 3px solid var(--bg); }
     }
   }
 }

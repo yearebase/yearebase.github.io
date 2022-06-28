@@ -18,18 +18,18 @@
           YesterWeb webring.
         {%- endif -%}
       </a>
-
-      {% if locale == "cs" %}
-        Jsou to fajn lidi, určitě se k nim <a href="https://yesterweb.org">jděte mrknout!</a>
-      {% elif locale == "tok" %}
-        kulupu ni li pona tawa mi. <a href="https://yesterweb.org">o lukin e lipu ona!</a>
-      {% else %}
-        They’re pretty cool people, make sure to <a href="https://yesterweb.org">check them out!</a>
-      {% endif %}
     </div>
     <ul class="links">
       <a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://yearebase.github.io/"><li>←</li></a>
-      <a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://yearebase.github.io/"><li>Random<li></a>
+      <a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://yearebase.github.io/"> {#- -#}
+        <li> {#- -#}
+          {%- if locale == "cs" -%}
+            Náhodná
+          {%- else -%}
+            Random
+          {%- endif -%}
+        </li> {#- -#}
+      </a>
       <a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://yearebase.github.io/"><li>→</li></a>
     </ul>
   </aside>

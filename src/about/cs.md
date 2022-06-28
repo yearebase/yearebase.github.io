@@ -7,7 +7,7 @@ translations:
   en: ..
   tok: ../tok
 
-stylesheets: [poetry]
+stylesheets: [about, poetry]
 ---
 
 # {{ title }}

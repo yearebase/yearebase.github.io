@@ -8,10 +8,10 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
-   sodipodi:docname="favicon.svg"
-   inkscape:export-filename="/home/tadeass/Projects/yearebase/res/img/favicon/favicon-48x48.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   sodipodi:docname="profile-pic.svg"
+   inkscape:export-filename="/home/tadeass/Projects/yearebase/res/profile-pic.png"
+   inkscape:export-xdpi="2048"
+   inkscape:export-ydpi="2048"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,10 +24,10 @@
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:document-units="mm"
+     inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="11.844781"
-     inkscape:cx="14.014611"
+     inkscape:cx="4.8966714"
      inkscape:cy="25.412036"
      inkscape:window-width="1920"
      inkscape:window-height="1006"
@@ -42,13 +42,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path989"
-       cx="6.3499999"
-       cy="6.3499999"
-       r="6.3499999"
-       inkscape:label="Background" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.990727"
+       id="rect1090"
+       width="12.7"
+       height="12.7"
+       x="5.5511151e-17"
+       y="5.5511151e-17" />
     <g
        aria-label="y"
        id="text2650"

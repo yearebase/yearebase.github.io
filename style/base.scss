@@ -76,7 +76,7 @@ a.logo {
 
 // Headlines {{{
 
-$headline-font-sizes: [3rem, 2.2rem, 1.6rem, 1.2rem, 1rem, 1rem];
+$headline-font-sizes: (3rem, 2.2rem, 1.6rem, 1.2rem, 1rem, 1rem);
 
 @for $i from 1 through 6 {
   h#{$i} {
@@ -143,6 +143,7 @@ body > .content {
 }
 
 body > footer {
+  text-align: center;
   font-size: .8rem;
 
   &, & a, & a:visited {

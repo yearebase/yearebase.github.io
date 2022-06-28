@@ -8,7 +8,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{{ title | renderMD }} ~ YeAreBase</title>
+  <title>
+    {% if title %}
+      {{ title | renderMD }} ~
+    {% endif %}
+    YeAreBase
+  </title>
 
   {# Icons {{{ #}
   {# Favicons {{{ #}
@@ -64,8 +69,16 @@
   {# }}} #}
 </head>
 
+{%- if locale == 'cs' -%}
+  {% set chooseLangText = "Výběr jazyka (Choose language)" %}
+{%- elif locale == 'tok' -%}
+  {% set chooseLangText = "o ante e toki (Choose language)" %}
+{%- else -%}
+  {% set chooseLangText = "Choose language" %}
+{%- endif -%}
+
 {% macro translationPager() -%}
-  <select class="translation-pager" style="display: none">
+  <select class="translation-pager" style="display: none" aria-label="{{ chooseLangText }}" title="{{ chooseLangText }}">
     <option value=".">{{ locale | getLang }}</option>
     {%- for l in 0 | allLangs -%}
       {%- if l != locale and translations and l in translations -%}
@@ -75,7 +88,7 @@
   </select>
   
   <noscript>
-    <div class="translation-pager-fallback">
+    <div class="translation-pager-fallback" aria-label="{{ chooseLangText }}" title="{{ chooseLangText }}">
       {%- for l in 0 | allLangs -%}
         {%- if l == locale -%}
           <li aria-current="page">{{ l | getLang }}</li>
@@ -169,9 +182,9 @@
 
       {% if isPost %}
         {% if locale == "cs" %}
-          Tento text je licencován pod
+          Toto dílo je licencováno pod licencí
         {% else %}
-          This text is licenced under
+          This work is licenced under
         {% endif %}
         <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
           {{- (license and license.name) or "CC BY 4.0" -}}
