@@ -12,7 +12,7 @@ stylesheets: [about, poetry]
 
 # {{ title }}
 
-mi [jan Tateso](https://github.com/tadeassoucek). mi pali e lipu ni pi ilo nanpa. sina wile toki kepeken mi la, o sitelen tawa [yearebase@gmail.com](mailto:yearebase@gmail.com).
+mi [jan Tateso](https://github.com/tadeassoucek). mi pali e lipu ni pi ilo nanpa. <span id="contact">sina wile toki kepeken mi la, o sitelen tawa <a href="mailto:yearebase@gmail.com">yearebase@gmail.com</a>.
 
 ## jan Tateso li seme? [[#me]]
 

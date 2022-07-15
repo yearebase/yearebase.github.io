@@ -12,7 +12,7 @@ stylesheets: [about, poetry]
 
 # {{ title }}
 
-This website was created and is operated by [Tadeáš Souček](https://github.com/tadeassoucek). Address any concerns or questions to [yearebase@gmail.com](mailto:yearebase@gmail.com).
+This website was created and is operated by [Tadeáš Souček](https://github.com/tadeassoucek). <span id="contact">Address any concerns or questions to <a href="mailto:yearebase@gmail.com">yearebase@gmail.com</a></span>.
 
 ## Who is Tadeáš Souček? [[#me]]
 

@@ -12,7 +12,7 @@ stylesheets: [about, poetry]
 
 # {{ title }}
 
-Tato stránka byla vytvořena a je spravována [Tadeášem Součkem](https://github.com/tadeassoucek). Otázky a připomínky posílejte na adresu [yearebase@gmail.com](mailto:yearebase@gmail.com).
+Tato stránka byla vytvořena a je spravována [Tadeášem Součkem](https://github.com/tadeassoucek). <span id="contact">Otázky a připomínky posílejte na adresu <a href="mailto:yearebase@gmail.com">yearebase@gmail.com</a></span>.
 
 ## Kdo je Tadeáš Souček? [[#me]]
 
