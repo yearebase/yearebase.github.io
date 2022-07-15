@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root {
-  font-size: 14pt;
-  font-family: "Libre Franklin", "Ubuntu", "Helvetica", "Arial", sans-serif;
+  font-size: 12pt;
+  font-family: "Merriweather Sans", "Ubuntu", "Helvetica", "Arial", sans-serif;
   --bg: white;
   --fg: black;
   --hi: #EE4B6A;
@@ -19,7 +19,7 @@
 }
 
 time {
-  font-family: "Libre Franklin", "Ubuntu", "Helvetica", "Arial", sans-serif;
+  font-family: "Merriweather Sans", "Ubuntu", "Helvetica", "Arial", sans-serif;
   font-size: 0.8em;
 }
 
@@ -32,12 +32,21 @@ time {
     box-shadow: none !important;
   }
 
-  body > header, body > footer {
+  body > footer {
+    display: none !important;
+  }
+
+  .translation-pager {
+    display: none !important;
+  }
+
+  .tab-bar {
     display: none !important;
   }
 }
 body {
-  background: var(--body-color);
+  background-color: var(--body-color);
+  background-image: url(/img/background.png);
   color: var(--text-color);
 }
 
@@ -67,7 +76,7 @@ a.logo > img {
 }
 
 h1 {
-  font-family: "Xanh Mono", monospace;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: 3rem;
   margin: 0.3em 0;
   color: var(--headline-color);
@@ -78,7 +87,7 @@ h1 + p {
 }
 
 h2 {
-  font-family: "Xanh Mono", monospace;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: 2.2rem;
   margin: 0.3em 0;
   color: var(--headline-color);
@@ -89,7 +98,7 @@ h2 + p {
 }
 
 h3 {
-  font-family: "Xanh Mono", monospace;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: 1.6rem;
   margin: 0.3em 0;
   color: var(--headline-color);
@@ -100,7 +109,7 @@ h3 + p {
 }
 
 h4 {
-  font-family: "Xanh Mono", monospace;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: 1.2rem;
   margin: 0.3em 0;
   color: var(--headline-color);
@@ -111,7 +120,7 @@ h4 + p {
 }
 
 h5 {
-  font-family: "Xanh Mono", monospace;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: 1rem;
   margin: 0.3em 0;
   color: var(--headline-color);
@@ -122,7 +131,7 @@ h5 + p {
 }
 
 h6 {
-  font-family: "Xanh Mono", monospace;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: 1rem;
   margin: 0.3em 0;
   color: var(--headline-color);
@@ -146,7 +155,7 @@ main > *:first-child {
     gap: 2rem;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: "topnav content" "empty content" "empty footer";
+    grid-template-areas: "topnav content" "empty content" "empty additional" "empty footer";
     padding: 1rem 10rem;
   }
   body > header {
@@ -157,6 +166,9 @@ main > *:first-child {
   }
   body > footer {
     grid-area: footer;
+  }
+  body .yw-webring {
+    grid-area: additional;
   }
 
   .split-v {
@@ -170,17 +182,19 @@ main > *:first-child {
 body > header,
 body > .content,
 body > footer {
-  overflow: auto;
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   padding: 1em;
+  overflow: auto;
   max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 3px 3px 4px 0 #00000055;
 }
 
 body > .content {
   padding: 0;
 }
 body > .content > main {
-  padding: 1em;
+  padding: 1em 1.5em;
 }
 
 body > footer {
