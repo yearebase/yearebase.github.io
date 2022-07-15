@@ -1,6 +1,5 @@
-@charset "UTF-8";
 :root {
-  font-size: 12pt;
+  font-size: 13pt;
   font-family: "Merriweather Sans", "Ubuntu", "Helvetica", "Arial", sans-serif;
   --bg: white;
   --fg: black;
@@ -54,9 +53,18 @@ body {
   border-top: 4px solid var(--hi);
 }
 
-*:target::after {
-  content: "←";
-  margin-left: 0.4em;
+@keyframes target-pulse {
+  0%, 100% {
+    text-shadow: none;
+  }
+  20% {
+    text-shadow: 0 0 5px black;
+  }
+}
+*:target {
+  animation-timing-function: linear;
+  animation-name: target-pulse;
+  animation-duration: 3s;
 }
 
 a, a:visited {
