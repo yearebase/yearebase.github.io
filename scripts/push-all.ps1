@@ -9,4 +9,5 @@ git push
 Set-Location .\built
 git add .
 git commit -m "."
-git push
+git push -u origin built
+Pop-Location
