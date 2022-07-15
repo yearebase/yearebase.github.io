@@ -5,7 +5,7 @@
   "private": true,
   "main": ".eleventy.js",
   "scripts": {
-    "clean": "rm -rf built/*",
+    "clean": ".\\scripts\\clean.ps1",
     "build": "npx @11ty/eleventy",
     "dry": "npx @11ty/eleventy --dryrun",
     "watch": "npx @11ty/eleventy --watch",

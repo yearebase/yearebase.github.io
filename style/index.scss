@@ -1,13 +1,15 @@
+@use "base";
 @use "responsive";
 @use "buttons";
 
 .yw-webring {
-  margin: auto;
-  margin-top: 3em;
+  @include base.visual-block();
+
   @include responsive.desktop() {
     width: 60%;
   }
 
+  margin: auto;
   text-align: center;
 
   .links {

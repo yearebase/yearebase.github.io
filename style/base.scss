@@ -4,10 +4,11 @@
 @use "buttons";
 @use "util";
 
-$fontSans: 'Libre Franklin', 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+$fontSerif: 'Merriweather', 'Times New Roman', serif;
+$fontSans: 'Merriweather Sans', 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
 
 :root {
-  font-size: 14pt;
+  font-size: 12pt;
   font-family: $fontSans;
 
   --bg: white;
@@ -21,6 +22,15 @@ $fontSans: 'Libre Franklin', 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
   --body-color: var(--bg);
 
   --bg-color: var(--bg);
+}
+
+@mixin visual-block() {
+  background-color: var(--bg-color);
+  padding: 1em;
+  overflow: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 3px 3px 4px 0 #00000055;
 }
 
 // selection colours
@@ -40,12 +50,17 @@ time {
 
   main { box-shadow: none !important; }
 
-  body > header, body > footer { display: none !important; }
+  body > footer { display: none !important; }
+
+  .translation-pager { display: none !important; }
+
+  .tab-bar { display: none !important; }
 }
 // }}}
 
 body {
-  background: var(--body-color);
+  background-color: var(--body-color);
+  background-image: url(/img/background.png);
   color: var(--text-color);
 }
 
@@ -80,7 +95,7 @@ $headline-font-sizes: (3rem, 2.2rem, 1.6rem, 1.2rem, 1rem, 1rem);
 
 @for $i from 1 through 6 {
   h#{$i} {
-    font-family: 'Xanh Mono', monospace;
+    font-family: $fontSerif;
     font-size: list.nth($headline-font-sizes, $i);
     margin: .3em 0;
     color: var(--headline-color);
@@ -109,12 +124,15 @@ main > *:first-child { margin-top: 0; }
     grid-template-areas:
       "topnav content"
       "empty content"
+      "empty additional"
       "empty footer";
     padding: 1rem 10rem;
 
     > header { grid-area: topnav; }
     > .content { grid-area: content; }
     > footer { grid-area: footer; }
+
+    .yw-webring { grid-area: additional; }
   }
 
   .split-v {
@@ -129,16 +147,13 @@ main > *:first-child { margin-top: 0; }
 body > header,
 body > .content,
 body > footer {
-  overflow: auto;
-  background: var(--bg-color);
-  padding: 1em;
-  max-width: 100%;
+  @include visual-block();
 }
 
 body > .content {
   padding: 0;
   > main {
-    padding: 1em;
+    padding: 1em 1.5em;
   }
 }
 

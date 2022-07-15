@@ -1,4 +1,14 @@
 - title:
+    en: "Another style change"
+    cs: "Další změna vzhledu"
+    tok: "lukin ante, nanpa tu"
+  summary:
+    en: "The colour combination stays the same though."
+    cs: "I když barvy se nemění."
+    tok: "kule li sama."
+  date: 2022-07-15
+
+- title:
     en: "Added to the YesterWeb webring!"
     cs: "Přidáno na webring YesterWebu!"
     tok: "lipu ni li lon lipu YesterWeb webring"
@@ -13,7 +23,7 @@
     cs: "Změna vzhledu"
     tok: "lukin ante"
   summary:
-    en: "That’s right! I picked a blasted colour combination!"
+    en: "That’s right! I picked a colour combination!"
     cs: "Ano! Vybral jsem barevnou kombinaci!"
     tok: "ni li lon a! mi ante e kule!"
   date: 2022-03-21
