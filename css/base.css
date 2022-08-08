@@ -152,6 +152,7 @@ h6 + p {
 body {
   display: grid;
   max-width: 100vw;
+  gap: 2rem;
 }
 
 main > *:first-child {
@@ -160,7 +161,6 @@ main > *:first-child {
 
 @media only screen and (min-width: 1200px) {
   body {
-    gap: 2rem;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "topnav content" "empty content" "empty additional" "empty footer";
