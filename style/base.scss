@@ -69,14 +69,17 @@ body {
 }
 
 @keyframes target-pulse {
-  0%, 100% { text-shadow: none; }
-  20% { text-shadow: 0 0 5px black; }
+  0%, 100% { transform: none; }
+  60% { transform: scale(1.05); }
 }
 
 *:target {
-  animation-timing-function: linear;
   animation-name: target-pulse;
-  animation-duration: 3s;
+  animation-duration: 1s;
+}
+
+span:target {
+  display: inline-block;
 }
 
 a, a:visited {
