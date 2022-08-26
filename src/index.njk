@@ -1,24 +1,27 @@
 ---
-locale: en
 layout: base
-
-section: home
-
-stylesheets: [update-list, post-list, post-header, index]
-
-translations:
-  cs: cs
-  tok: tok
 ---
 
-<h1>Welcome to my website!</h1>
+<h1>YeAreBase</h1>
 
-<div class="split-v">
-  {% from "post.njk" import showPostListPreview %}
-  {{ showPostListPreview(collections.post | reverse, 3, locale) }}
+<ul>
+  {% for p in collections.post %}
+    <li>
+      <a href="{{ p.url }}">
+        <h2>{{ p.data.title }}</h2>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
-  {% from "update.njk" import showUpdateListPreview %}
-  {{ showUpdateListPreview(updates, 3, locale) }}
+<p>For the moment, I am keeping this website as more or less a placeholder. More things may be added in the future, if and when I decide on the nature of the relationship between me and what I make. In the meantime, you may enjoy browsing the <a href="https://yesterweb.org/webring/">YesterWeb webring</a>:</p>
+
+<div class="yw-webring">
+  <nav>
+    <ul>
+      <li><a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://yesterweb.org/">Previous</a></li>
+      <li><a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://yesterweb.org/">Random</a></li>
+      <li><a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://yesterweb.org/">Next</a></li>
+    </ul>
+  </nav>
 </div>
-
-<p>Wanna know what this is about? Head over to the helpfully titled <a href="/about/">About page!</a></p>

@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="{{ locale }}">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>
-    {% if title %}
-      {{ title | renderMD }} ~
-    {% endif %}
-    YeAreBase
-  </title>
-
-  {# Icons {{{ #}
-  {# Favicons {{{ #}
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="shortcut icon" sizes="16x16" href="/favicon-16x16.png">
   <link rel="shortcut icon" sizes="32x32" href="/favicon-32x32.png">
@@ -25,187 +15,41 @@
   <link rel="shortcut icon" sizes="128x128" href="/favicon-128x128.png">
   <link rel="shortcut icon" sizes="256x256" href="/favicon-256x256.png">
   <link rel="shortcut icon" sizes="512x512" href="/favicon-512x512.png">
-  {# }}} #}
 
-  <link rel="apple-touch-icon" href="/favicon-128x128.png">
-  {# }}} #}
-  
-  {# Theme colours {{{ #}
-  <meta name="theme-color" content="#EE4B6A">
-  <meta name="msapplication-TileColor" content="#EE4B6A">
-  {# }}} #}
-
-  {# Google fonts {{{ #}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
-  {# }}} #}
-
-  {# My stylesheets {{{ #}
   <link rel="stylesheet" href="/css/base.css">
 
-  {% for ss in stylesheets %}
-    <link rel="stylesheet" href="/css/{{ ss }}.css">
-  {% endfor %}
-  {# }}} #}
-
-  {# Metadata {{{ #}
-  {# OpenGraph {{{ #}
-  <meta property="og:type" content="{{ "article" if isPost else "website" }}">
-  <meta property="og:title" content="{{ title }}">
-  {% if subtitle %}
-    <meta property="og:description" content="{{ subtitle | renderMD | stripHTML | truncate(199, true, "…") }}">
+  {% if not title %}
+    {% set title = "YeAreBase" %}
+  {% else %}
+    {% set title = title + " &bull; YeAreBase" %}
   {% endif %}
-  <meta property="og:site_name" content="YeAreBase">
-  <meta property="og:locale" content="{{ locale }}">
-  {# }}} #}
-
-  {# Twitter {{{ #}
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:creator" content="@tadeassoucek">
-  <meta name="twitter:site" content="@YeAreBase">
-  {# }}} #}
-  {# }}} #}
+  <title>{{ title }}</title>
 </head>
 
-{%- if locale == 'cs' -%}
-  {% set chooseLangText = "Výběr jazyka (Choose language)" %}
-{%- elif locale == 'tok' -%}
-  {% set chooseLangText = "o ante e toki (Choose language)" %}
-{%- else -%}
-  {% set chooseLangText = "Choose language" %}
-{%- endif -%}
-
-{% macro translationPager() -%}
-  <select class="translation-pager" style="display: none" aria-label="{{ chooseLangText }}" title="{{ chooseLangText }}">
-    <option value=".">{{ locale | getLang }}</option>
-    {%- for l in 0 | allLangs -%}
-      {%- if l != locale and translations and l in translations -%}
-        <option value="{{ translations[l] }}">{{ l | getLang }}</option>
-      {%- endif -%}
-    {%- endfor -%}
-  </select>
-  
-  <noscript>
-    <div class="translation-pager-fallback" aria-label="{{ chooseLangText }}" title="{{ chooseLangText }}">
-      {%- for l in 0 | allLangs -%}
-        {%- if l == locale -%}
-          <li aria-current="page">{{ l | getLang }}</li>
-        {%- elif translations and l in translations -%}
-          <a href="{{ translations[l] }}"><li>{{ l | getLang }}</li></a>
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
-  </noscript>
-{% endmacro %}
-
 <body>
-  {# Header {{{ #}
-  <header>
-    {%- set homeURL = '/' + ('' if locale == 'en' else locale + '/') -%}
-    <a class="logo" href="{{ homeURL }}"> {#- -#}
-      <img src="/img/logo-colour-scheme.svg" alt="YeAreBase"> {#- -#}
-    </a>
+  <header class="topnav">
     <nav>
-      {{- translationPager() -}}
-    </nav>
-    <hr>
-  </header>
-  {# }}} #}
-
-  <div class="content">
-    {# Tab bar {{{ #}
-    <nav class="tab-bar">
       <ul>
-        {% macro _link(text, url) %}
-          {% if not url %} {% set url = "/" + text + '/' %} {% endif %}
-          <a href="{{ url }}{{ locale + "/" if locale != "en" else "" }}"
-             {%- if section == text %} aria-current="page" {%- endif %}>
-            <li>{{ text | t(locale) | lcapitalize(locale) }}</li>
-          </a>
-        {% endmacro %}
-
-        {{- _link("home", "/") -}}
-        {{- _link("all") -}}
-        {{- _link("blog") -}}
-        {{- _link("poems") -}}
-        {{- _link("about") -}}
-        {{- _link("updates") -}}
+        <li><a href="/">Home</a></li>
       </ul>
     </nav>
-    {# }}} #}
+  </header>
 
-    <script>
-      function attachListener(el) {
-        el.addEventListener('change', function(ev) {
-          window.location = ev.target.value;
-        });
-      }
+  <main>
+    {{ content }}
+  </main>
 
-      Array.from(document.getElementsByClassName("translation-pager")).forEach(function(el) {
-        el.style.display = "block";
-        attachListener(el);
-      });
-    </script>
-
-    <main>
-      {{ content }}
-    </main>
-  </div>
-
-  {% if section == "home" %}
-    {% from "webring.njk" import webring %}
-    {{ webring(locale) }}
+  {% if license or publicDomain %}
+    <footer>
+      <hr>
+      Licensed under
+      {% if publicDomain -%}
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
+      {%- else -%}
+        <a href="{{ license.url }}">{{ license.name }}</a>
+      {%- endif %}.
+    </footer>
   {% endif %}
-
-  {# Footer {{{ #}
-  <footer>
-    <hr>
-
-    <p>
-      <a href="#">
-        {%- if locale == "cs" -%}
-          Zpět nahoru.
-        {%- elif locale == "tok" -%}
-          lon sewi.
-        {%- else -%}
-          Back to top.
-        {%- endif -%}
-      </a>
-    </p>
-
-    {# Licence notice {{{ #}
-    <p>
-      {% if locale == "cs" %}
-        <a href="https://github.com/yearebase/yearebase.github.io">Kód této stránky</a> je licencován pod
-        <a href="https://opensource.org/licenses/MIT">licencí MIT</a>.
-      {% else %}
-        <a href="https://github.com/yearebase/yearebase.github.io">This website’s code</a> is licenced under the
-        <a href="https://opensource.org/licenses/MIT">MIT licence</a>.
-      {% endif %}
-
-      {% if isPost %}
-        {% if locale == "cs" %}
-          Toto dílo je licencováno pod licencí
-        {% else %}
-          This work is licenced under
-        {% endif %}
-        <a href="{{ (license and license.url) or "https://creativecommons.org/licenses/by/4.0/" }}">
-          {{- (license and license.name) or "CC BY 4.0" -}}
-        </a>.
-      {% endif %}
-
-      {% if locale == "cs" %}
-        Pokud jste našli chybu, <a href="/about/cs/#contact">napište mi.</a>
-      {% else %}
-        If you’ve found a mistake, <a href="/about/#contact">contact me.</a>
-      {% endif %}
-    </p>
-
-    {# }}} #}
-  </footer>
-  {# }}} #}
-
 </body>
 
 </html>

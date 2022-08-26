@@ -1,17 +1,8 @@
----js
-{
-  layout: "base",
-  isPost: true,
-  eleventyComputed: {
-    stylesheets: data => [...(data.stylesheets || []), "post", "post-header"]
-  }
-}
+---
+layout: base
+isPost: true
 ---
 
-{% from "post.njk" import showPostHeader %}
-
-<header>
-  {{ showPostHeader({ "data": { "title": title, "subtitle": subtitle, "date": date, "tags": tags } }, locale, link = false) }}
-</header>
+<h1>{{ title }}</h1>
 
 {{ content }}

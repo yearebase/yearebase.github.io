@@ -1,8 +1,0 @@
-{% macro showDate(date, class) %}
-  {% set date = date | toDate %}
-  <time class="{{ class }}" datetime="{{ date.toISOString() }}">
-    {{ date.getFullYear() }}-
-    {{- (date.getMonth() + 1).toString().padStart(2, '0') }}-
-    {{- date.getDate().toString().padStart(2, '0') }}
-  </time>
-{% endmacro %}
